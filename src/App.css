@@ -84,22 +84,31 @@
     font-size: 18px;
   }
 
-  .navbar-links {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background: #2227224e;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    display: none;
-  }
+.navbar-links {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: #2227224e;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: max-height 1.4s ease, opacity 2.4s ease, transform 1.4s ease;
+  display: flex; /* Keep it flex but hidden via max-height */
+}
 
-  .navbar-links.active {
-    display: flex;
-  }
+/* Active/open state */
+.navbar-links.active {
+  max-height: 300px; /* or large enough to fit all items */
+  opacity: 1;
+  transform: translateY(0);
+}
+
   .navbar-container {
     padding: 10px 10px;
   }
