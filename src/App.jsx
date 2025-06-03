@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./App.css";
 import { FaWhatsapp, FaGithub, FaLinkedin, FaLongArrowAltRight, FaBars, FaTimes } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { FaGreaterThan } from "react-icons/fa";
+import { FaLessThan } from "react-icons/fa";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,7 +34,18 @@ function App() {
             </li>
           </ul>
         </nav>
+           <div>
+        <section className="hero">
+          <div className="hero-content">
+             <p className="header-para">Hello <span class="wave">👋</span> I'm  </p>
+         <span className="header-heading"> <span className="code-icon"> <FaLessThan /></span>Usman <br /> Javed/<span className="code-icon"><FaGreaterThan /></span></span>
+             <p className="header-para">Full Stack Web Developer</p>
+          </div>
+        </section>
+      </div>
       </header>
+   
+
     </>
   );
 }

@@ -124,3 +124,40 @@
   transform: skewX(40deg); 
   }
 }
+
+.wave {
+  display: inline-block;
+  animation: wave-hand 4.5s infinite;
+}
+
+@keyframes wave-hand {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(14deg); }
+  30% { transform: rotate(-8deg); }
+  45% { transform: rotate(14deg); }
+  60% { transform: rotate(-4deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.hero {
+  text-align: center;
+  margin-top: 70px;
+}
+.hero-content {
+  color: #fff;
+}
+.code-icon {
+  position: relative;
+  top: 2px;
+  font-size: 28px;
+}
+.header-para {
+  font-size: 28px;
+}
+.header-heading {
+  font-size: 38px;
+  letter-spacing: 2px;
+  color: #a3e635;
+  font-weight: bold;
+}
