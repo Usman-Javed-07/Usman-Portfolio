@@ -86,19 +86,26 @@
   }
 }
 
+.navbar {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+
 .navbar::before {
   content: "";
   position: absolute;
-  top: -30px;
-  left: 0px;
-  width: 20%;
-  height: 90%;
+  top: -380px;
+  left: 0;
+  width: 300px;
+  height: 120%; 
   background: linear-gradient(
-    8935deg,
-    rgba(132, 204, 22, 0.2),
+    135deg,
+    rgba(132, 204, 22, 0.3),
     rgba(132, 204, 22, 0)
   );
   z-index: -1;
-  transform: rotate(-3deg);
+  transform: skewX(50deg); 
   filter: blur(12px);
 }
+
