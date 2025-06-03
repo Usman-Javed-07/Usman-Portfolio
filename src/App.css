@@ -99,12 +99,10 @@
   opacity: 0;
   transform: translateY(-10px);
   transition: max-height 1.4s ease, opacity 2.4s ease, transform 1.4s ease;
-  display: flex; /* Keep it flex but hidden via max-height */
+  display: flex;
 }
-
-/* Active/open state */
 .navbar-links.active {
-  max-height: 300px; /* or large enough to fit all items */
+  max-height: 300px;
   opacity: 1;
   transform: translateY(0);
 }
