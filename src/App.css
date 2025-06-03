@@ -1,3 +1,10 @@
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
 .navbar-container {
   display: flex;
   align-items: center;
@@ -37,4 +44,37 @@
 }
 .resume-link {
   margin-top: -5px;
+}
+
+
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #2227224e;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    display: none;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+  .navbar-container {
+    padding: 10px 10px;
+  }
+  .logo-image{
+  width: 40px;
+  height: 30px;
+}
 }
