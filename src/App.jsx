@@ -152,8 +152,11 @@ function App() {
             </li>
           </ul>
           </div>
-        
-       
+          
+          <div className="my-image">
+           <img src="./images/usman.png" alt="my image" />
+          </div>
+    
       </header>
     </>
   );
