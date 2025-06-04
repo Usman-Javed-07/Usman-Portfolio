@@ -159,6 +159,7 @@
 }
 .header-para {
   font-size: 28px;
+  padding: 40px;
 }
 .header-heading {
   font-size: 44px;
@@ -207,6 +208,16 @@
   align-items: center;
 }
 .my-image img {
-  width: 400px;
+  width: 450px;
   height: auto;
+}
+@media screen and (max-width: 768px) {
+  .my-image img {
+    width: 200px;
+    height: auto;
+  }
+  .sidebar-links {
+    gap: 5px;
+    font-size: 20px;
+  }
 }
