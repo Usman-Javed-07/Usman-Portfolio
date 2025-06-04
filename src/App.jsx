@@ -159,6 +159,10 @@ function App() {
                <div className="node-icon">
                 <img src="./images/nod.png" alt="node js" />
                </div>
+
+               <div className="js-icon">
+                <img src="./images/js.png" alt="js" />
+               </div>
       </header>
     </>
   );
