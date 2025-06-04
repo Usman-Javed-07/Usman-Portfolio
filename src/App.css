@@ -166,3 +166,29 @@
   color: #a3e635;
   font-weight: bold;
 }
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  margin-left: -30px;
+  position: sticky;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-size: 24px;
+
+}
+.sidebar-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.5s ease;;
+  display: inline-block;
+}
+.sidebar-links a:hover {
+  color: #84cc16;
+  transform: translateY(-3px);
+}
+.icon-bar {
+  color: #fff;
+  font-size: 100px;
+  margin-left: -40px;
+}

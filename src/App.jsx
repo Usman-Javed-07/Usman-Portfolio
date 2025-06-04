@@ -11,6 +11,7 @@ import {
   FaGreaterThan,
   FaLessThan,
 } from "react-icons/fa";
+import { PiLineVerticalThin } from "react-icons/pi";
 import { MdEmail } from "react-icons/md";
 import Typewriter from "./Typewriter.jsx";
 
@@ -86,6 +87,7 @@ function App() {
               </a>
             </li>
           </ul>
+
         </nav>
         <section className="hero">
           <div className="hero-content">
@@ -106,6 +108,52 @@ function App() {
             </p>
           </div>
         </section>
+
+          <div className="sidebar-icons">
+             <ul className={"sidebar-links"}>
+            <li>
+              <a
+                href="https://wa.me/+923415477580"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp />
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:usmanjaved0816@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MdEmail />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/Usman-Javed-07"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/usman-javed07/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin />
+              </a>
+            </li>
+            <li>
+              <span className="icon-bar"><PiLineVerticalThin /></span>
+            </li>
+          </ul>
+          </div>
+        
+       
       </header>
     </>
   );
