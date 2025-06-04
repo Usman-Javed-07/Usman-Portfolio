@@ -100,7 +100,12 @@
   transform: translateY(-10px);
   transition: max-height 1.4s ease, opacity 2.4s ease, transform 1.4s ease;
   display: flex;
+
+  /** ✅ Fixes **/
+  z-index: 999; /* ensures it shows above all other elements */
+  backdrop-filter: blur(10px); /* optional: makes background nice */
 }
+
 .navbar-links.active {
   max-height: 300px;
   opacity: 1;
@@ -156,7 +161,7 @@
   font-size: 28px;
 }
 .header-heading {
-  font-size: 38px;
+  font-size: 44px;
   letter-spacing: 2px;
   color: #a3e635;
   font-weight: bold;
