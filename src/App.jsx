@@ -193,64 +193,89 @@ function App() {
             always aim to deliver high-quality, on-time results.
           </p>
           <p className="aboutwork-para">#open_to_work #open_to_relocation</p>
-           <div className="resume-link more-about-me">
-              <a
-                className="resume"
-                href="/Usman javed(web developer).pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                    more about me{" "}
-                <span className="arrow">
-                  <FaLongArrowAltRight />
-                </span>
-              </a>
-            </div>
+          <div className="resume-link more-about-me">
+            <a
+              className="resume"
+              href="/Usman javed(web developer).pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              more about me{" "}
+              <span className="arrow">
+                <FaLongArrowAltRight />
+              </span>
+            </a>
+          </div>
           <div className="my-accounts">
-          <ul className={"account-links"}>
-            <li>
-              <a
-                href="https://wa.me/+923415477580"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaWhatsapp />
-              </a>
-            </li>
-            <li>
-              <a
-                href="mailto:usmanjaved0816@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MdEmail />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/Usman-Javed-07"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/usman-javed07/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin />
-              </a>
-            </li>
-  
-          </ul>
-        </div> <br /> <br />
-           <h1 className="about-heading">{"}"}{" "}</h1>
-
+            <ul className={"account-links"}>
+              <li>
+                <a
+                  href="https://wa.me/+923415477580"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaWhatsapp />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:usmanjaved0816@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MdEmail />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Usman-Javed-07"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/usman-javed07/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedin />
+                </a>
+              </li>
+            </ul>
+          </div>{" "}
+          <br /> <br />
+          <h1 className="about-heading">{"}"} </h1>
         </section>
       </main>
+
+      <section className="work-section">
+        <div className="work-companies">
+          <p>Companies I'm proud to have collaborated with</p>
+        </div>
+        <div style={{ overflow: "hidden", width: "100%" }}>
+          <div className="company-logo">
+            <img src="./images/sols.jpg" alt="sols" />
+            <img src="./images/zbee.jpg" alt="zbee" />
+            <img src="./images/sols.jpg" alt="sols" />
+            <img src="./images/zbee.jpg" alt="zbee" />
+            <img src="./images/sols.jpg" alt="sols" />
+            <img src="./images/zbee.jpg" alt="zbee" />
+            <img src="./images/sols.jpg" alt="sols" />
+            <img src="./images/zbee.jpg" alt="zbee" />
+            <img src="./images/sols.jpg" alt="sols" />
+            <img src="./images/zbee.jpg" alt="zbee" />
+            <img src="./images/sols.jpg" alt="sols" />
+            <img src="./images/zbee.jpg" alt="zbee" />
+            <img src="./images/sols.jpg" alt="sols" />
+            <img src="./images/zbee.jpg" alt="zbee" />
+            <img src="./images/sols.jpg" alt="sols" />
+            <img src="./images/zbee.jpg" alt="zbee" />
+          </div>
+        </div>
+      </section>
     </>
   );
 }

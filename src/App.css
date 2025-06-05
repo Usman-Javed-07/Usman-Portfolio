@@ -545,3 +545,31 @@
     gap: 20px;
   }
 }
+
+.work-companies {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}
+
+.company-logo {
+  display: flex;
+  gap: 20px;
+  animation: slideX 10s infinite alternate ease-in-out;
+  width: max-content;
+  padding: 50px;
+}
+
+@keyframes slideX {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.company-logo img {
+  width: 100px;
+  height: auto;
+}
