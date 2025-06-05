@@ -281,11 +281,42 @@
 }
 .js-icon {
  display: flex;
+ position: relative;
 }
 .js-icon img {
-  position: relative;
+  position: absolute;
   width: 80px;
   height: auto;
-  top: -300px;
-  left: 570px;
+  top: -14rem;
+  left: 32%;
+}
+@media screen and (max-width: 1024px) {
+  .js-icon img  {
+    height: auto;
+    top: -15rem;
+    left: 21%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .js-icon img  {
+    width: 40px;
+    height: auto;
+    top: -8rem;
+    left: 32%;
+  }
+}
+@media screen and (max-width: 426px) {
+  .js-icon img  {
+    height: auto;
+    top: -7rem;
+    left: 17%;
+  }
+}
+@media screen and (max-width: 321px) {
+  .js-icon img  {
+    width: 30px;
+    height: auto;
+    top: -6rem;
+    left: 10%;
+  }
 }
