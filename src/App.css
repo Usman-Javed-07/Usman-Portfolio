@@ -312,6 +312,14 @@
     left: 17%;
   }
 }
+@media screen and (max-width: 376px) {
+  .js-icon img  {
+    height: auto;
+    top: -7rem;
+    left: 12%;
+  }
+}
+
 @media screen and (max-width: 321px) {
   .js-icon img  {
     width: 30px;
