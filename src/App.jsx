@@ -276,6 +276,16 @@ function App() {
           </div>
         </div>
       </section>
+
+      <section className="projects-section">
+        <div className="projects">
+             <h1 className="about-heading">
+            {" "}
+            <span className="text-about">Projects</span> ( ) {"{"}{" "}
+          </h1>
+        </div>
+
+      </section>
     </>
   );
 }
