@@ -163,8 +163,13 @@ function App() {
                <div className="js-icon">
                 <img src="./images/js.png" alt="js" />
                </div>
+
                <div className="react-icon">
                 <img src="./images/react.png" alt="react" />
+               </div>
+
+               <div className="html-icon">
+                <img src="./images/html.png" alt="html" />
                </div>
       </header>
     </>
