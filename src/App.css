@@ -279,6 +279,7 @@
     left: 40px !important;
   }
 }
+
 .js-icon {
  display: flex;
  position: relative;
@@ -326,5 +327,58 @@
     height: auto;
     top: -6rem;
     left: 10%;
+  }
+}
+
+/* 
+ */
+
+ .react-icon {
+ display: flex;
+ position: relative;
+}
+.react-icon img {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  top: -34rem;
+  left: 55%;
+}
+@media screen and (max-width: 1024px) {
+  .react-icon img  {
+    height: auto;
+    top: -35rem;
+    left: 58%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .react-icon img  {
+    width: 40px;
+    height: auto;
+    top: -15rem;
+    left: 55%;
+  }
+}
+@media screen and (max-width: 426px) {
+  .react-icon img  {
+    height: auto;
+    top: -15rem;
+    left: 59%;
+  }
+}
+@media screen and (max-width: 376px) {
+  .react-icon img  {
+    height: auto;
+    top: -15rem;
+    left: 60%;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .react-icon img  {
+    width: 30px;
+    height: auto;
+    top: -15rem;
+    left: 64%;
   }
 }
