@@ -172,7 +172,12 @@
 }
 .header-para {
   font-size: 28px;
-  padding: 40px;
+
+}
+@media screen and (max-width:500px) {
+  .header-para {
+      padding: 40px;
+  }
 }
 .header-heading {
   font-size: 44px;
@@ -431,5 +436,110 @@
     height: auto;
     top: -9rem;
     left: 80%;
+  }
+}
+
+.main-content {
+  color: #fff;
+  margin-top: 190px;
+  padding: 100px;
+}
+.about {
+  background-color: #101410;
+  padding: 30px;
+  border-radius: 10px;
+}
+.about-heading {
+  font-weight: 500;
+}
+.text-about {
+  color: #a3e635;
+}
+.about-para {
+  font-size: 18px;
+  padding: 40px 180px 0px 180px;
+}
+.aboutwork-para {
+   color: #a3e635;
+   font-size: 18px;
+    padding: 0px 180px;
+}
+.more-about-me  a {
+ text-decoration: none;
+}
+.more-about-me {
+  text-align: center;
+ 
+}
+.my-accounts ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  list-style: none;
+   transition: color 0.3s ease, transform 0.5s ease;
+   margin-top: 40px;
+
+}
+.my-accounts ul a {
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s ease, transform 0.5s ease !important;
+  display: inline-block;
+}
+
+.my-accounts ul a:hover {
+  color: #84cc16;
+  transform: translateY(-3px);
+}
+
+@media screen and (max-width:1024px) {
+  .main-content {
+    margin-top: 24.7rem;
+  }
+  .about-para {
+    padding: 40px 100px 0px 100px;
+}
+}
+
+@media screen and (max-width:768px) {
+  .main-content {
+    margin-top: 5.3rem;
+  }
+  .about-para {
+    padding: 40px 100px 0px 100px;
+}
+  .about-para {
+    padding: 40px 50px 0px 50px;
+}
+.aboutwork-para {
+  padding: 0px 50px;
+}
+}
+
+@media screen and (max-width:476px) {
+  .about {
+    padding: 10px;
+  }
+  .main-content {
+    margin-top: 20rem;
+    padding: 40px;
+  }
+  .about-para {
+    padding: 10px 10px 0px 10px;
+}
+.aboutwork-para {
+  padding: 0px 10px;
+}
+.my-accounts ul {
+  gap: 40px;
+  justify-content: start;
+}
+}
+
+@media screen and (max-width:376px) {
+  .my-accounts ul {
+    margin-left: -22px;
+    gap: 20px;
   }
 }
