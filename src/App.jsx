@@ -15,10 +15,67 @@ import { PiLineVerticalThin } from "react-icons/pi";
 import { MdEmail } from "react-icons/md";
 import Typewriter from "./Typewriter.jsx";
 
+const projectsData = [
+  {
+    image: './images/solslogo.png',
+    title: 'Cara E-commerce website',
+    link: 'https://github.com/Usman-Javed-07/Html-Css-design-6',
+    displayLink: 'caraEcom.com',
+    description:
+      'Cara is a modern online shopping platform specializing in fashionable clothing. Customers can explore a wide range of trendy outfits for men, women, and kids. With a user-friendly interface and secure checkout.',
+  },
+  {
+    image: './images/zbeelogo.png',
+    title: 'Private Artwork Management',
+    link: 'https://github.com/Usman-Javed-07/Artwork-management-frontend',
+    displayLink: 'Artwork.Management.com',
+    description:
+      'Private Artwork Management is an art-focused website showcasing a diverse collection of unique artworks. It features creative pieces inspired by everyday objects like cups, paper, and floral themes.',
+  },
+  {
+    image: './images/freelancerlogo.png',
+    title: 'Ai Mental Health Therapist',
+    link: 'https://github.com/Usman-Javed-07/Ai-mental-Health-Frontend',
+    displayLink: 'AiMHT.com',
+    description:
+      'AI Mental Health Therapist is a virtual assistant that helps you understand and manage stress, anxiety, and depression. It offers quick, personalized support for better mental well-being.',
+  },
+  {
+    image: './images/zbeelogo.png',
+    title: 'Slot Machine',
+    link: 'https://github.com/Usman-Javed-07/Slot-machine',
+    displayLink: 'slotmachine.com',
+    description:
+      'Slot Machine is a engaging game that simulates the experience of playing a real slot machine. Spin the reels and try your luck to win exciting prizes and rewards.',
+  },
+  {
+    image: './images/zbeelogo.png',
+    title: 'Slot Machine 2',
+    link: 'https://github.com/Usman-Javed-07/Slot-machine',
+    displayLink: 'slotmachine.com',
+    description:
+      'Slot Machine is a engaging game that simulates the experience of playing a real slot machine. Spin the reels and try your luck to win exciting prizes and rewards.',
+  },
+];
+
+const ProjectCard = ({ project }) => (
+  <div className="project-card">
+    <img src={project.image} alt={project.title} />
+    <h4>{project.title}</h4>
+    <a href={project.link} target="_blank" rel="noopener noreferrer">
+      {project.displayLink}
+    </a>
+    <p>{project.description}</p>
+  </div>
+);
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showAll, setShowAll] = useState(false);
+  const visibleProjects = showAll ? projectsData : projectsData.slice(0, 4);
 
   return (
+    
     <>
       <header className="navbar">
         <nav className="navbar-container">
@@ -276,62 +333,39 @@ function App() {
       </section>
 
       <section className="projects-section">
-        <div className="projects">
-          <h1 className="about-heading">
-            {" "}
-            <span className="text-about">Projects</span> ( ) {"{"}{" "}
-          </h1>
+      <div className="projects">
+        <h1 className="about-heading">
+          {" "}
+          <span className="text-about">Projects</span> ( ) {"{"}{" "}
+        </h1>
 
-          <div className="work-companies">
-            <p>Some of my notable work</p>
-          </div>
-          <section className="projects-container">
-            <div className="project-grid">
-              <div className="project-card">
-                <img src="./images/solslogo.png" alt="sols" />
-                <h4>Cara E-commerce website</h4>
-
-                <a
-                  href="https://github.com/Usman-Javed-07/Html-Css-design-6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {" "}
-                  caraEcom.com
-                </a>
-
-                <p>
-                  Cara is a modern online shopping platform specializing in
-                  fashionable clothing. Customers can explore a wide range of
-                  trendy outfits for men, women, and kids. With a user-friendly
-                  interface and secure checkout.
-                </p>
-              </div>
-              {/*  */}
-              <div className="project-card">
-                  <img src="./images/zbeelogo.png" alt="zbee" />
-                <h4>Private Artwork Management</h4>
-                <a
-                  href="https://github.com/Usman-Javed-07/Artwork-management-frontend"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {" "}
-                  Artwork.Management.com
-                </a>
-
-                <p>
-                  Private Artwork Management is an art-focused website
-                  showcasing a diverse collection of unique artworks. It
-                  features creative pieces inspired by everyday objects like
-                  cups, paper, and floral themes.
-                </p>
-              </div>
-            </div>
-            {/*  */}
-          </section>
+        <div className="work-companies">
+          <p>Some of my notable work</p>
         </div>
-      </section>
+
+        <section className="projects-container">
+          <div className="project-grid">
+            {visibleProjects.map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
+          </div>
+
+          {projectsData.length > 4 && (
+            <div style={{ textAlign: 'center' }}>
+              <a
+                onClick={() => setShowAll(!showAll)}
+                className="resume viewmore-btn"
+              >
+                {showAll ? 'Close' : 'View All Projects'}
+                 <span className="arrow">
+                <FaLongArrowAltRight />
+              </span>
+              </a>
+            </div>
+          )}
+        </section>
+      </div>
+    </section>
     </>
   );
 }

@@ -172,11 +172,10 @@
 }
 .header-para {
   font-size: 28px;
-
 }
-@media screen and (max-width:500px) {
+@media screen and (max-width: 500px) {
   .header-para {
-      padding: 40px;
+    padding: 40px;
   }
 }
 .header-heading {
@@ -286,8 +285,8 @@
 }
 
 .js-icon {
- display: flex;
- position: relative;
+  display: flex;
+  position: relative;
 }
 .js-icon img {
   position: absolute;
@@ -297,14 +296,14 @@
   left: 32%;
 }
 @media screen and (max-width: 1024px) {
-  .js-icon img  {
+  .js-icon img {
     height: auto;
     top: -15rem;
     left: 21%;
   }
 }
 @media screen and (max-width: 768px) {
-  .js-icon img  {
+  .js-icon img {
     width: 40px;
     height: auto;
     top: -8rem;
@@ -312,14 +311,14 @@
   }
 }
 @media screen and (max-width: 426px) {
-  .js-icon img  {
+  .js-icon img {
     height: auto;
     top: -7rem;
     left: 17%;
   }
 }
 @media screen and (max-width: 376px) {
-  .js-icon img  {
+  .js-icon img {
     height: auto;
     top: -7rem;
     left: 12%;
@@ -327,7 +326,7 @@
 }
 
 @media screen and (max-width: 321px) {
-  .js-icon img  {
+  .js-icon img {
     width: 30px;
     height: auto;
     top: -6rem;
@@ -338,9 +337,9 @@
 /* 
  */
 
- .react-icon {
- display: flex;
- position: relative;
+.react-icon {
+  display: flex;
+  position: relative;
 }
 .react-icon img {
   position: absolute;
@@ -350,14 +349,14 @@
   left: 55%;
 }
 @media screen and (max-width: 1024px) {
-  .react-icon img  {
+  .react-icon img {
     height: auto;
     top: -35rem;
     left: 58%;
   }
 }
 @media screen and (max-width: 768px) {
-  .react-icon img  {
+  .react-icon img {
     width: 40px;
     height: auto;
     top: -15rem;
@@ -365,14 +364,14 @@
   }
 }
 @media screen and (max-width: 426px) {
-  .react-icon img  {
+  .react-icon img {
     height: auto;
     top: -15rem;
     left: 59%;
   }
 }
 @media screen and (max-width: 376px) {
-  .react-icon img  {
+  .react-icon img {
     height: auto;
     top: -15rem;
     left: 60%;
@@ -380,7 +379,7 @@
 }
 
 @media screen and (max-width: 321px) {
-  .react-icon img  {
+  .react-icon img {
     width: 30px;
     height: auto;
     top: -15rem;
@@ -389,9 +388,9 @@
 }
 /*  */
 
- .html-icon {
- display: flex;
- position: relative;
+.html-icon {
+  display: flex;
+  position: relative;
 }
 .html-icon img {
   position: absolute;
@@ -401,14 +400,14 @@
   left: 62%;
 }
 @media screen and (max-width: 1024px) {
-  .html-icon img  {
+  .html-icon img {
     height: auto;
     top: -20rem;
     left: 70%;
   }
 }
 @media screen and (max-width: 768px) {
-  .html-icon img  {
+  .html-icon img {
     width: 70px;
     height: auto;
     top: -10rem;
@@ -416,14 +415,14 @@
   }
 }
 @media screen and (max-width: 426px) {
-  .html-icon img  {
+  .html-icon img {
     height: auto;
     top: -10rem;
     left: 71%;
   }
 }
 @media screen and (max-width: 376px) {
-  .html-icon img  {
+  .html-icon img {
     height: auto;
     top: -10rem;
     left: 75%;
@@ -431,7 +430,7 @@
 }
 
 @media screen and (max-width: 321px) {
-  .html-icon img  {
+  .html-icon img {
     width: 50px;
     height: auto;
     top: -9rem;
@@ -449,7 +448,6 @@
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 12px 30px rgba(131, 204, 22, 0.081);
-
 }
 .about-heading {
   font-weight: 500;
@@ -460,29 +458,26 @@
 .about-para {
   font-size: 18px;
   padding: 40px 180px 0px 180px;
-  
 }
 .aboutwork-para {
-   color: #a3e635;
-   font-size: 18px;
-    padding: 0px 180px;
+  color: #a3e635;
+  font-size: 18px;
+  padding: 0px 180px;
 }
-.more-about-me  a {
- text-decoration: none;
+.more-about-me a {
+  text-decoration: none;
 }
 .more-about-me {
   text-align: center;
- 
 }
-.my-accounts ul{
+.my-accounts ul {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 80px;
   list-style: none;
-   transition: color 0.3s ease, transform 0.5s ease;
-   margin-top: 40px;
-
+  transition: color 0.3s ease, transform 0.5s ease;
+  margin-top: 40px;
 }
 .my-accounts ul a {
   color: #fff;
@@ -496,28 +491,28 @@
   transform: translateY(-3px);
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1024px) {
   .main-content {
     margin-top: 24.7rem;
   }
   .about-para {
     padding: 40px 100px 0px 100px;
-}
+  }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .main-content {
     margin-top: 5.3rem;
   }
   .about-para {
     padding: 40px 10px 0px 10px;
-}
-.aboutwork-para {
-  padding: 0px 50px;
-}
+  }
+  .aboutwork-para {
+    padding: 0px 50px;
+  }
 }
 
-@media screen and (max-width:476px) {
+@media screen and (max-width: 476px) {
   .about {
     padding: 10px;
   }
@@ -527,17 +522,17 @@
   }
   .about-para {
     padding: 10px 10px 0px 10px;
-}
-.aboutwork-para {
-  padding: 0px 10px;
-}
-.my-accounts ul {
-  gap: 40px;
-  justify-content: start;
-}
+  }
+  .aboutwork-para {
+    padding: 0px 10px;
+  }
+  .my-accounts ul {
+    gap: 40px;
+    justify-content: start;
+  }
 }
 
-@media screen and (max-width:376px) {
+@media screen and (max-width: 376px) {
   .my-accounts ul {
     margin-left: -22px;
     gap: 20px;
@@ -576,17 +571,24 @@
   margin-left: 60px;
 }
 .projects {
-  color:#fff;
+  color: #fff;
 }
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   padding: 50px;
+  cursor: pointer;
 }
-@media screen and (max-width:768px) {
+.project-card {
+  transition: color 0.3s ease, transform 0.5s ease;
+}
+.project-card:hover {
+  transform: translateY(-10px);
+}
+@media screen and (max-width: 768px) {
   .project-grid {
-      grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .project-card {
@@ -603,11 +605,11 @@
   margin-top: -20px;
 }
 .project-card a {
- text-decoration: none;
- position: relative;
- top: -10px;
- color: #3b82f6;
- font-size: 0.9rem;
+  text-decoration: none;
+  position: relative;
+  top: -10px;
+  color: #3b82f6;
+  font-size: 0.9rem;
 }
 .project-card a:hover {
   text-decoration: underline;
@@ -616,4 +618,17 @@
   font-size: 16px;
   color: #d1d5db;
   margin-top: 3px;
+}
+
+.viewmore-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+.project-container {
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  max-height: 0; /* hidden by default */
 }
