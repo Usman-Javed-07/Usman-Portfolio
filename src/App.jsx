@@ -363,6 +363,7 @@ function App() {
               </a>
             </div>
           )}
+         <p style={{ fontSize: '24px', fontWeight: 500, marginLeft: '50px'}}>{"}"}{" "}</p>
         </section>
       </div>
     </section>
