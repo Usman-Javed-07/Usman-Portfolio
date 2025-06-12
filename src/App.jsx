@@ -257,34 +257,80 @@ function App() {
         </div>
         <div style={{ overflow: "hidden", width: "100%" }}>
           <div className="company-logo">
-            <img src="./images/sols.jpg" alt="sols" />
-            <img src="./images/zbee.jpg" alt="zbee" />
-            <img src="./images/sols.jpg" alt="sols" />
-            <img src="./images/zbee.jpg" alt="zbee" />
-            <img src="./images/sols.jpg" alt="sols" />
-            <img src="./images/zbee.jpg" alt="zbee" />
-            <img src="./images/sols.jpg" alt="sols" />
-            <img src="./images/zbee.jpg" alt="zbee" />
-            <img src="./images/sols.jpg" alt="sols" />
-            <img src="./images/zbee.jpg" alt="zbee" />
-            <img src="./images/sols.jpg" alt="sols" />
-            <img src="./images/zbee.jpg" alt="zbee" />
-            <img src="./images/sols.jpg" alt="sols" />
-            <img src="./images/zbee.jpg" alt="zbee" />
-            <img src="./images/sols.jpg" alt="sols" />
-            <img src="./images/zbee.jpg" alt="zbee" />
+            <img src="./images/solslogo.png" alt="sols" />
+            <img src="./images/zbeelogo.png" alt="zbee" />
+            <img src="./images/solslogo.png" alt="sols" />
+            <img src="./images/zbeelogo.png" alt="zbee" />
+            <img src="./images/solslogo.png" alt="sols" />
+            <img src="./images/zbeelogo.png" alt="zbee" />
+            <img src="./images/solslogo.png" alt="sols" />
+            <img src="./images/zbeelogo.png" alt="zbee" />
+            <img src="./images/solslogo.png" alt="sols" />
+            <img src="./images/zbeelogo.png" alt="zbee" />
+            <img src="./images/solslogo.png" alt="sols" />
+            <img src="./images/zbeelogo.png" alt="zbee" />
+            <img src="./images/solslogo.png" alt="sols" />
+            <img src="./images/zbeelogo.png" alt="zbee" />
           </div>
         </div>
       </section>
 
       <section className="projects-section">
         <div className="projects">
-             <h1 className="about-heading">
+          <h1 className="about-heading">
             {" "}
             <span className="text-about">Projects</span> ( ) {"{"}{" "}
           </h1>
-        </div>
 
+          <div className="work-companies">
+            <p>Some of my notable work</p>
+          </div>
+          <section className="projects-container">
+            <div className="project-grid">
+              <div className="project-card">
+                <img src="./images/solslogo.png" alt="sols" />
+                <h4>Cara E-commerce website</h4>
+
+                <a
+                  href="https://github.com/Usman-Javed-07/Html-Css-design-6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {" "}
+                  caraEcom.com
+                </a>
+
+                <p>
+                  Cara is a modern online shopping platform specializing in
+                  fashionable clothing. Customers can explore a wide range of
+                  trendy outfits for men, women, and kids. With a user-friendly
+                  interface and secure checkout.
+                </p>
+              </div>
+              {/*  */}
+              <div className="project-card">
+                  <img src="./images/zbeelogo.png" alt="zbee" />
+                <h4>Private Artwork Management</h4>
+                <a
+                  href="https://github.com/Usman-Javed-07/Artwork-management-frontend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {" "}
+                  Artwork.Management.com
+                </a>
+
+                <p>
+                  Private Artwork Management is an art-focused website
+                  showcasing a diverse collection of unique artworks. It
+                  features creative pieces inspired by everyday objects like
+                  cups, paper, and floral themes.
+                </p>
+              </div>
+            </div>
+            {/*  */}
+          </section>
+        </div>
       </section>
     </>
   );

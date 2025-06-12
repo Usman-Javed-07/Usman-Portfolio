@@ -460,6 +460,7 @@
 .about-para {
   font-size: 18px;
   padding: 40px 180px 0px 180px;
+  
 }
 .aboutwork-para {
    color: #a3e635;
@@ -509,10 +510,7 @@
     margin-top: 5.3rem;
   }
   .about-para {
-    padding: 40px 100px 0px 100px;
-}
-  .about-para {
-    padding: 40px 50px 0px 50px;
+    padding: 40px 10px 0px 10px;
 }
 .aboutwork-para {
   padding: 0px 50px;
@@ -573,6 +571,49 @@
   width: 100px;
   height: auto;
 }
+
+.text-about {
+  margin-left: 60px;
+}
 .projects {
   color:#fff;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 50px;
+}
+@media screen and (max-width:768px) {
+  .project-grid {
+      grid-template-columns: repeat(1, 1fr);
+  }
+}
+.project-card {
+  background-color: #101410;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(131, 204, 22, 0.081);
+}
+.project-card img {
+  width: 130px;
+  height: auto;
+}
+.project-card h4 {
+  margin-top: -20px;
+}
+.project-card a {
+ text-decoration: none;
+ position: relative;
+ top: -10px;
+ color: #3b82f6;
+ font-size: 0.9rem;
+}
+.project-card a:hover {
+  text-decoration: underline;
+}
+.project-card p {
+  font-size: 16px;
+  color: #d1d5db;
+  margin-top: 3px;
 }
