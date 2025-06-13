@@ -51,10 +51,10 @@ const projectsData = [
   {
     image: './images/zbeelogo.png',
     title: '4 week Qtr',
-    link: 'https://github.com/Usman-Javed-07/Slot-machine',
+    link: 'https://github.com/Usman-Javed-07/4-week-qtr',
     displayLink: 'weekQtr.com',
     description:
-      'Slot Machine is a engaging game that simulates the experience of playing a real slot machine. Spin the reels and try your luck to win exciting prizes and rewards.',
+      '4 Week QTR is a personalized routine management project where users can set monthly goals, daily targets, and receive 3 customizable notifications per day at preferred times.',
   },
 ];
 
