@@ -50,9 +50,9 @@ const projectsData = [
   },
   {
     image: './images/zbeelogo.png',
-    title: 'Slot Machine 2',
+    title: '4 week Qtr',
     link: 'https://github.com/Usman-Javed-07/Slot-machine',
-    displayLink: 'slotmachine.com',
+    displayLink: 'weekQtr.com',
     description:
       'Slot Machine is a engaging game that simulates the experience of playing a real slot machine. Spin the reels and try your luck to win exciting prizes and rewards.',
   },
