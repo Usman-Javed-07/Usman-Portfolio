@@ -121,7 +121,7 @@ const projectsData = [
       'Opic 3D is a mobile app similar to TikTok, allowing users to create, share, and explore engaging short-form 3D videos.'
   },
     {
-    image: './images/solslogo.png',
+    image: './images/freelancerlogo.png',
     title: 'Thapa store',
     link: 'https://github.com/Usman-Javed-07/ecom-project',
     displayLink: 'thapa.com',
@@ -135,6 +135,22 @@ const projectsData = [
     displayLink: 'worldatlas.com',
     description:
       'World Atlas is a project that provides key details of every country, including native name, population, region, capital, currency, domain, and languages.',
+  },
+     {
+    image: './images/solslogo.png',
+    title: 'Moshify',
+    link: 'https://github.com/Usman-Javed-07/Html_Css_Design_1',
+    displayLink: 'moshify.com',
+    description:
+      'Moshify is a simple cloud hosting website built for practice It showcases modern design using HTML and CSS. Great for learning layout, responsiveness, and styling basics.',
+  },
+     {
+    image: './images/solslogo.png',
+    title: 'Industrial supplies',
+    link: 'https://github.com/Usman-Javed-07/Html_Css_Design_2nd',
+    displayLink: 'industrial-supplies.com',
+    description:
+      'Industrial Supplies is a comprehensive online platform offering a wide range of industrial products and services. It connects suppliers and buyers, streamlining the procurement process.',
   },
 ];
 
