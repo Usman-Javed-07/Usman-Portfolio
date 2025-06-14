@@ -56,7 +56,56 @@ const projectsData = [
     description:
       '4 Week QTR is a personalized routine management project where users can set monthly goals, daily targets, and receive 3 customizable notifications per day at preferred times.',
   },
+  {
+    image: './images/solslogo.png',
+    title: 'Quizzical App',
+    link: 'https://github.com/Usman-Javed-07/quizzicalApp',
+    displayLink: 'quizzical.com',
+    description:
+      'Quizzical is a quiz app with subjects like Computer Science, Music, Animals, Sports, and more. It shows user scores and correct answers at the end, helping users test and improve their knowledge.',
+  },
+    {
+    image: './images/solslogo.png',
+    title: 'Hug or shrug',
+    link: 'https://github.com/Usman-Javed-07/html-css-design-5',
+    displayLink: 'Hug.shrug.com',
+    description:
+      'Hug or Shrug is a fun web app for entertainment where users can share and rate things like brands, lifestyle choices, habits, hobbies, and more. Its a lighthearted way to express opinions and see what others think.'
+  },
+     {
+    image: './images/zbeelogo.png',
+    title: 'XRCHIV',
+    link: 'https://github.com/Usman-Javed-07/Xarchive',
+    displayLink: 'xrchiv.com',
+    description:
+      'XRCHIV is a application built for efficient data management and visualization. The project provides a streamlined user interface with robust features for creating, viewing, and managing data archives.'
+  },
+   {
+    image: './images/zbeelogo.png',
+    title: 'Plate Of Africa',
+    link: 'https://github.com/Usman-Javed-07/Plate-of-Africa',
+    displayLink: 'Plate-Of-Africa.com',
+    description:
+      'Plate of Africa is a restaurant website where users can explore the menu, place orders, and pay online seamlessly. It offers a smooth and convenient dining experience from browsing to checkout.'
+  },
+  {
+    image: './images/zbeelogo.png',
+    title: 'character image',
+    link: 'https://github.com/Usman-Javed-07/character-image-backend',
+    displayLink: 'character-image.com',
+    description:
+      'Character Image is a Shopify store where users can browse and purchase merchandise featuring their favorite characters. It offers a fun and personalized shopping experience for fans of all kinds.'
+  },
+   {
+    image: './images/zbeelogo.png',
+    title: 'atlas-ai',
+    link: 'https://github.com/Usman-Javed-07/character-image-backend',
+    displayLink: 'atlas-ai.com',
+    description:
+      'This application enables users to interact with an AI through text or voice, choose from a variety of AI personas, and seamlessly send emails via the Gmail API.'
+  },
 ];
+
 
 const ProjectCard = ({ project }) => (
   <div className="project-card">
