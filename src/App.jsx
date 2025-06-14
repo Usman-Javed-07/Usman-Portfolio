@@ -99,10 +99,34 @@ const projectsData = [
    {
     image: './images/zbeelogo.png',
     title: 'atlas-ai',
-    link: 'https://github.com/Usman-Javed-07/character-image-backend',
+    link: 'https://github.com/Usman-Javed-07/atlasAi',
     displayLink: 'atlas-ai.com',
     description:
       'This application enables users to interact with an AI through text or voice, choose from a variety of AI personas, and seamlessly send emails via the Gmail API.'
+  },
+   {
+    image: './images/zbeelogo.png',
+    title: 'Clothing Store',
+    link: 'https://github.com/Usman-Javed-07/clothing-store-backend',
+    displayLink: 'ClothingStore.com',
+    description:
+      'Clothing Store is an e-commerce website where users can browse and purchase apparel online, add items to their cart, and complete secure payments with ease.'
+  },
+   {
+    image: './images/zbeelogo.png',
+    title: 'Opic 3D',
+    link: 'https://github.com/Usman-Javed-07/Opic-3D',
+    displayLink: 'opic3d.com',
+    description:
+      'Opic 3D is a mobile app similar to TikTok, allowing users to create, share, and explore engaging short-form 3D videos.'
+  },
+    {
+    image: './images/solslogo.png',
+    title: 'Thapa store',
+    link: 'https://github.com/Usman-Javed-07/ecom-project',
+    displayLink: 'thapa.com',
+    description:
+      'Thapa is an online store offering mobiles, laptops, and accessories with sections like Products, Explore, and Checkout for a smooth shopping experience.',
   },
 ];
 
