@@ -128,6 +128,14 @@ const projectsData = [
     description:
       'Thapa is an online store offering mobiles, laptops, and accessories with sections like Products, Explore, and Checkout for a smooth shopping experience.',
   },
+   {
+    image: './images/freelancerlogo.png',
+    title: 'World Atlas',
+    link: 'https://github.com/Usman-Javed-07/react-project-',
+    displayLink: 'worldatlas.com',
+    description:
+      'World Atlas is a project that provides key details of every country, including native name, population, region, capital, currency, domain, and languages.',
+  },
 ];
 
 
