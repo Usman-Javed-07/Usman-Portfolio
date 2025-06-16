@@ -725,6 +725,7 @@
 }
 .work-months p {
   color:  #d1d5db;
+  font-size: 14px;
 }
 .experience-container {
   padding: 50px;
@@ -740,6 +741,7 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 12px 30px rgba(131, 204, 22, 0.081);
+  margin-bottom: 20px;
 
 }
 .toggle-btn {
