@@ -178,6 +178,19 @@ const projectsData = [
   },
 ];
 
+const points = [
+  "Led end-to-end development of full stack web applications using React, Node.js, Express.js, and MongoDB/MySQL for real-world projects and practice-based learning.",
+  "Built and deployed multiple frontend interfaces focusing on responsive design, user experience, and component reusability with modern JavaScript and CSS frameworks.",
+  "Designed and implemented RESTful APIs and handled backend logic including authentication, CRUD operations, and database integration.",
+  "Developed and maintained full stack projects, connecting frontend and backend seamlessly to demonstrate dynamic data flow and user interaction.",
+  "Collaborated in Git-based workflows, managing branches, pull requests, and version control across projects for better team coordination and deployment readiness.",
+  "Participated in code reviews, debugging, and optimization, improving performance and code quality across all developed modules.",
+  "Worked closely with mentors and peers in Agile-style development cycles, consistently meeting feature delivery targets and deadlines.",
+  "Gained hands-on experience in API integration, secure login (JWT), data validation, and deployment processes on platforms like Render and Vercel.",
+  "Practiced translating UI/UX designs from tools like Figma into live interactive components, adhering to accessibility and usability best practices.",
+  "Explored and applied modern development practices including state management, form handling, and responsive grid systems to enhance user interaction.",
+];
+
 const ProjectCard = ({ project }) => (
   <div className="project-card">
     <img src={project.image} alt={project.title} />
@@ -496,41 +509,72 @@ function App() {
           <p>Technologies I have used</p>
         </div>
         <div className="skills-container">
-  <div className="skills-slider">
-    <div className="my-skills">
-      <img src="./images/htmllogo.png" alt="html logo" />
-      <img src="./images/css.png" alt="css logo" />
-      <img src="./images/Angular.png" alt="angular logo" />
-      <img src="./images/js.png" alt="js logo" />
-      <img src="./images/react.png" alt="react logo" />
-      <img src="./images/nodejs.png" alt="node js logo" />
-      <img src="./images/express.png" alt="express js logo" />
-      <img src="./images/mongodb.png" alt="mongodb logo" />
-      <img src="./images/mysql.png" alt="mysql logo" />
-      <img src="./images/tailwind.png" alt="tailwind logo" />
-      <img src="./images/bootstrap.png" alt="bootstrap logo" />
-      <img src="./images/github.png" alt="github logo" />
-      <img src="./images/git.png" alt="git logo" />
+          <div className="skills-slider">
+            <div className="my-skills">
+              <img src="./images/htmllogo.png" alt="html logo" />
+              <img src="./images/css.png" alt="css logo" />
+              <img src="./images/Angular.png" alt="angular logo" />
+              <img src="./images/js.png" alt="js logo" />
+              <img src="./images/react.png" alt="react logo" />
+              <img src="./images/nodejs.png" alt="node js logo" />
+              <img src="./images/express.png" alt="express js logo" />
+              <img src="./images/mongodb.png" alt="mongodb logo" />
+              <img src="./images/mysql.png" alt="mysql logo" />
+              <img src="./images/tailwind.png" alt="tailwind logo" />
+              <img src="./images/bootstrap.png" alt="bootstrap logo" />
+              <img src="./images/github.png" alt="github logo" />
+              <img src="./images/git.png" alt="git logo" />
 
-      {/* duplicate images */}
-      
-      <img src="./images/htmllogo.png" alt="html logo" />
-      <img src="./images/css.png" alt="css logo" />
-      <img src="./images/Angular.png" alt="angular logo" />
-      <img src="./images/js.png" alt="js logo" />
-      <img src="./images/react.png" alt="react logo" />
-      <img src="./images/nodejs.png" alt="node js logo" />
-      <img src="./images/express.png" alt="express js logo" />
-      <img src="./images/mongodb.png" alt="mongodb logo" />
-      <img src="./images/mysql.png" alt="mysql logo" />
-      <img src="./images/tailwind.png" alt="tailwind logo" />
-      <img src="./images/bootstrap.png" alt="bootstrap logo" />
-      <img src="./images/github.png" alt="github logo" />
-      <img src="./images/git.png" alt="git logo" />
-    </div>
-  </div>
-</div>
+              {/* duplicate images */}
 
+              <img src="./images/htmllogo.png" alt="html logo" />
+              <img src="./images/css.png" alt="css logo" />
+              <img src="./images/Angular.png" alt="angular logo" />
+              <img src="./images/js.png" alt="js logo" />
+              <img src="./images/react.png" alt="react logo" />
+              <img src="./images/nodejs.png" alt="node js logo" />
+              <img src="./images/express.png" alt="express js logo" />
+              <img src="./images/mongodb.png" alt="mongodb logo" />
+              <img src="./images/mysql.png" alt="mysql logo" />
+              <img src="./images/tailwind.png" alt="tailwind logo" />
+              <img src="./images/bootstrap.png" alt="bootstrap logo" />
+              <img src="./images/github.png" alt="github logo" />
+              <img src="./images/git.png" alt="git logo" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="my-experience-section">
+        <div className="projects my-experience">
+          <h1 className="about-heading">
+            {" "}
+            <span className="text-about">Experience</span> ( ) {"{"}{" "}
+          </h1>
+        </div>
+
+        <div className="experience-container">
+          <div className="experience-card">
+            <div className="company-logo--img">
+              <img src="./images/solslogo.png" alt="sols" />
+              <div className="work-months">
+                <p>Aug 2024 - Nov 2024</p>
+                <h3>Full stack developer</h3>
+              </div>
+              </div>
+              <div className="work-description">
+                <div className="experience-container">
+                  <ul className="experience-list">
+                    {points.map((point, index) => (
+                      <li key={index} className="experience-point">
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            
+          </div>
+        </div>
       </section>
     </>
   );

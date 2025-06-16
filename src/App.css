@@ -680,3 +680,57 @@
     height: 40px;
   }
 }
+
+.my-experience {
+  margin-top: 4rem;
+}
+
+
+.experience-container {
+  padding: 20px;
+}
+
+.experience-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.experience-point {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 25px;
+  color: #fff;
+}
+
+.experience-point::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #84cc16;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.company-logo--img {
+  display: flex;
+  align-items: center;
+}
+.company-logo--img img {
+  width: 80px;
+  height: auto;
+  margin-right: 10px;
+}
+.work-months h3,p {
+  color: #fff;
+}
+.experience-container {
+  padding: 50px;
+}
+.experience-card {
+  background-color: #101410;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(131, 204, 22, 0.081);
+
+}
