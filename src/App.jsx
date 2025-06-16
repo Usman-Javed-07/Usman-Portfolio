@@ -495,6 +495,42 @@ function App() {
         <div className="work-companies">
           <p>Technologies I have used</p>
         </div>
+        <div className="skills-container">
+  <div className="skills-slider">
+    <div className="my-skills">
+      <img src="./images/htmllogo.png" alt="html logo" />
+      <img src="./images/css.png" alt="css logo" />
+      <img src="./images/Angular.png" alt="angular logo" />
+      <img src="./images/js.png" alt="js logo" />
+      <img src="./images/react.png" alt="react logo" />
+      <img src="./images/nodejs.png" alt="node js logo" />
+      <img src="./images/express.png" alt="express js logo" />
+      <img src="./images/mongodb.png" alt="mongodb logo" />
+      <img src="./images/mysql.png" alt="mysql logo" />
+      <img src="./images/tailwind.png" alt="tailwind logo" />
+      <img src="./images/bootstrap.png" alt="bootstrap logo" />
+      <img src="./images/github.png" alt="github logo" />
+      <img src="./images/git.png" alt="git logo" />
+
+      {/* duplicate images */}
+      
+      <img src="./images/htmllogo.png" alt="html logo" />
+      <img src="./images/css.png" alt="css logo" />
+      <img src="./images/Angular.png" alt="angular logo" />
+      <img src="./images/js.png" alt="js logo" />
+      <img src="./images/react.png" alt="react logo" />
+      <img src="./images/nodejs.png" alt="node js logo" />
+      <img src="./images/express.png" alt="express js logo" />
+      <img src="./images/mongodb.png" alt="mongodb logo" />
+      <img src="./images/mysql.png" alt="mysql logo" />
+      <img src="./images/tailwind.png" alt="tailwind logo" />
+      <img src="./images/bootstrap.png" alt="bootstrap logo" />
+      <img src="./images/github.png" alt="github logo" />
+      <img src="./images/git.png" alt="git logo" />
+    </div>
+  </div>
+</div>
+
       </section>
     </>
   );

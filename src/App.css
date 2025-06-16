@@ -630,5 +630,53 @@
 .project-container {
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
-  max-height: 0; /* hidden by default */
+  max-height: 0;
+}
+
+
+.skills-container {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.skills-slider {
+  display: flex;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+.my-skills {
+  display: flex;
+  gap: 40px;
+  width: max-content; /* important for long rows */
+}
+
+.my-skills img {
+  height: 60px;
+  width: auto;
+}
+
+/* Animation: Left to Right */
+@keyframes scroll {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Responsive tweaks for small screens */
+@media (max-width: 768px) {
+  .my-skills img {
+    height: 50px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-skills img {
+    height: 40px;
+  }
 }
