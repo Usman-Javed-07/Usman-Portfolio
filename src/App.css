@@ -750,3 +750,22 @@
 .work-description {
   margin-top: -60px;
 }
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 40px;
+}
+.footer-content img {
+  height: 50px;
+  width: auto;
+}
+.footer-content p {
+  font-size: 14px;
+}
+.footer-highlight {
+ color: #84cc16;
+}
