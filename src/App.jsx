@@ -206,6 +206,7 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showAll, setShowAll] = useState(false);
   const visibleProjects = showAll ? projectsData : projectsData.slice(0, 4);
+  const visiblePoints = showAll ? points : points.slice(0, 4);
 
   return (
     <>
@@ -558,21 +559,29 @@ function App() {
               <img src="./images/solslogo.png" alt="sols" />
               <div className="work-months">
                 <p>Aug 2024 - Nov 2024</p>
-                <h3>Full stack developer</h3>
+                <h4>Full stack developer</h4>
               </div>
+            </div>
+            <div className="work-description">
+              <div className="experience-container">
+                <ul className="experience-list">
+                  {visiblePoints.map((point, index) => (
+                    <li key={index} className="experience-point">
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  onClick={() => setShowAll(!showAll)}
+                  className="toggle-btn resume"
+                >
+                  {showAll ? "Close" : "Read More"}
+                  <span className="arrow">
+                    <FaLongArrowAltRight />
+                  </span>
+                </a>
               </div>
-              <div className="work-description">
-                <div className="experience-container">
-                  <ul className="experience-list">
-                    {points.map((point, index) => (
-                      <li key={index} className="experience-point">
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            
+            </div>
           </div>
         </div>
       </section>

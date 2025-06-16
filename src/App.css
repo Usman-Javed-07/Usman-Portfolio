@@ -686,10 +686,6 @@
 }
 
 
-.experience-container {
-  padding: 20px;
-}
-
 .experience-list {
   list-style-type: none;
   padding-left: 0;
@@ -721,11 +717,23 @@
   height: auto;
   margin-right: 10px;
 }
-.work-months h3,p {
+.work-months h4 {
   color: #fff;
+  margin-top: -5px;
+  font-weight: 600;
+  font-size: 18px;
+}
+.work-months p {
+  color:  #d1d5db;
 }
 .experience-container {
   padding: 50px;
+}
+@media screen and (max-width: 500px) {
+  .experience-container {
+    padding: 20px;
+  }
+  
 }
 .experience-card {
   background-color: #101410;
@@ -733,4 +741,10 @@
   border-radius: 10px;
   box-shadow: 0 12px 30px rgba(131, 204, 22, 0.081);
 
+}
+.toggle-btn {
+  margin-left: 25px;
+}
+.work-description {
+  margin-top: -60px;
 }
