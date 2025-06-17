@@ -1,5 +1,6 @@
 // App.js
-import { useState } from "react";
+// import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import {
   FaWhatsapp,
@@ -10,6 +11,7 @@ import {
   FaTimes,
   FaGreaterThan,
   FaLessThan,
+  FaArrowUp,
 } from "react-icons/fa";
 import { PiLineVerticalThin } from "react-icons/pi";
 import { MdEmail } from "react-icons/md";
@@ -226,10 +228,28 @@ const ProjectCard = ({ project }) => (
   </div>
 );
 
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showAll, setShowAll] = useState(false);
   const visibleProjects = showAll ? projectsData : projectsData.slice(0, 4);
+  const [showScroll, setShowScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScroll(window.scrollY > 200); // Show after 200px scroll
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <>
@@ -388,6 +408,7 @@ function App() {
       </header>
 
       {/* Main Content */}
+
       <main className="main-content">
         <section className="about">
           <h1 className="about-heading">
@@ -462,6 +483,11 @@ function App() {
           <br /> <br />
           <h1 className="about-heading">{"}"} </h1>
         </section>
+        {showScroll && (
+  <button className="scroll-to-top" onClick={scrollToTop}>
+    <FaArrowUp />
+  </button>
+)}
       </main>
 
       <section className="work-section">
@@ -580,6 +606,11 @@ function App() {
           {experiences.map((exp, idx) => (
             <ExperienceCard key={idx} {...exp} />
           ))}
+         <p
+              style={{ fontSize: "24px", fontWeight: 500, marginLeft: "5px", color:"#fff" }}
+            >
+              {"}"}{" "}
+            </p>
         </div>
       </section>
 
