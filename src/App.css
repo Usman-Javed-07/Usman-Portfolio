@@ -12,14 +12,14 @@
 }
 
 .logo-image {
-  width: 55px;
-  height: 45px;
+  width: 45px;
+  height: 35px;
 }
 .navbar-links {
   list-style: none;
   display: flex;
   gap: 20px;
-  font-size: 24px;
+  font-size: 20px;
 }
 .navbar-links a {
   text-decoration: none;
@@ -62,7 +62,7 @@
 .navbar::before {
   content: "";
   position: absolute;
-  top: -320px;
+  top: -280px;
   left: 0;
   width: 300px;
   height: 120%;
@@ -74,6 +74,7 @@
   z-index: -1;
   transform: skewX(50deg);
   filter: blur(12px);
+
 }
 
 @media (max-width: 700px) {
@@ -99,10 +100,8 @@
     transform: translateY(-10px);
     transition: max-height 1.4s ease, opacity 2.4s ease, transform 1.4s ease;
     display: flex;
-
-    /** ✅ Fixes **/
-    z-index: 999; /* ensures it shows above all other elements */
-    backdrop-filter: blur(10px); /* optional: makes background nice */
+    z-index: 999; 
+    backdrop-filter: blur(10px);
   }
 
   .navbar-links.active {
@@ -160,7 +159,7 @@
 
 .hero {
   text-align: center;
-  margin-top: 70px;
+  margin-top: 30px;
 }
 .hero-content {
   color: #fff;
@@ -171,7 +170,7 @@
   font-size: 28px;
 }
 .header-para {
-  font-size: 28px;
+  font-size: 22px;
 }
 @media screen and (max-width: 500px) {
   .header-para {
@@ -179,7 +178,7 @@
   }
 }
 .header-heading {
-  font-size: 44px;
+  font-size: 36px;
   letter-spacing: 2px;
   color: #a3e635;
   font-weight: bold;
@@ -225,7 +224,7 @@
   align-items: center;
 }
 .my-image img {
-  width: 450px;
+  width: 400px;
   height: auto;
 }
 @media screen and (max-width: 768px) {
@@ -243,10 +242,10 @@
 }
 .node-icon img {
   position: relative;
-  width: 200px;
+  width: 170px;
   height: auto;
   top: -350px;
-  left: 550px;
+  left: 500px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -290,10 +289,10 @@
 }
 .js-icon img {
   position: absolute;
-  width: 80px;
+  width: 60px;
   height: auto;
   top: -14rem;
-  left: 32%;
+  left: 33%;
 }
 @media screen and (max-width: 1024px) {
   .js-icon img {
@@ -343,7 +342,7 @@
 }
 .react-icon img {
   position: absolute;
-  width: 100px;
+  width: 80px;
   height: auto;
   top: -34rem;
   left: 55%;
@@ -394,7 +393,7 @@
 }
 .html-icon img {
   position: absolute;
-  width: 130px;
+  width: 100px;
   height: auto;
   top: -20rem;
   left: 62%;
@@ -440,7 +439,7 @@
 
 .main-content {
   color: #fff;
-  margin-top: 190px;
+  margin-top: 90px;
   padding: 100px;
 }
 .about {
@@ -456,12 +455,12 @@
   color: #a3e635;
 }
 .about-para {
-  font-size: 18px;
+  font-size: 16px;
   padding: 40px 180px 0px 180px;
 }
 .aboutwork-para {
   color: #a3e635;
-  font-size: 18px;
+  font-size: 16px;
   padding: 0px 180px;
 }
 .more-about-me a {
@@ -541,7 +540,7 @@
 
 .work-companies {
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
 }
 
@@ -563,7 +562,7 @@
 }
 
 .company-logo img {
-  width: 130px;
+  width: 110px;
   height: auto;
 }
 
@@ -598,7 +597,7 @@
   box-shadow: 0 12px 30px rgba(131, 204, 22, 0.081);
 }
 .project-card img {
-  width: 130px;
+  width: 110px;
   height: auto;
 }
 .project-card h4 {
@@ -615,7 +614,7 @@
   text-decoration: underline;
 }
 .project-card p {
-  font-size: 16px;
+  font-size: 14px;
   color: #d1d5db;
   margin-top: 3px;
 }
@@ -649,7 +648,7 @@
 .my-skills {
   display: flex;
   gap: 40px;
-  width: max-content; /* important for long rows */
+  width: max-content;
 }
 
 .my-skills img {
@@ -657,7 +656,6 @@
   width: auto;
 }
 
-/* Animation: Left to Right */
 @keyframes scroll {
   0% {
     transform: translateX(-50%);
@@ -667,7 +665,6 @@
   }
 }
 
-/* Responsive tweaks for small screens */
 @media (max-width: 768px) {
   .my-skills img {
     height: 50px;
@@ -696,6 +693,7 @@
   position: relative;
   padding-left: 25px;
   color: #fff;
+  font-size: 14px;
 }
 
 .experience-point::before {
@@ -725,7 +723,7 @@
 }
 .work-months p {
   color:  #d1d5db;
-  font-size: 14px;
+  font-size: 12px;
 }
 .experience-container {
   padding: 50px;
