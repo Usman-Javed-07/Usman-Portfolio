@@ -178,17 +178,25 @@ body {
 .header-para {
   font-size: 22px;
 }
-@media screen and (max-width: 500px) {
-  .header-para {
-    padding: 40px;
-  }
-}
 .header-heading {
   font-size: 36px;
   letter-spacing: 2px;
   color: #a3e635;
   font-weight: bold;
 }
+@media screen and (max-width: 500px) {
+  .header-para {
+    padding: 40px;
+    font-size: 16px;
+  }
+  .header-heading {
+    font-size: 32px;
+  }
+  .hero {
+    margin-top: -30px;
+  }
+}
+
 .sidebar-icons {
   position: fixed;
   bottom: 0px;
@@ -534,18 +542,30 @@ body {
     padding: 10px;
   }
   .main-content {
-    margin-top: 20rem;
-    padding: 40px;
+    margin-top: 90px;
+    padding: 45px;
   }
   .about-para {
     padding: 10px 10px 0px 10px;
+    font-size: 13px;
   }
   .aboutwork-para {
     padding: 0px 10px;
+    font-size: 13px;
+    text-align: center;
   }
   .my-accounts ul {
     gap: 40px;
     justify-content: start;
+  }
+  .about-heading {
+    font-size: 18px;
+  }
+  .more-about-me a  {
+    font-size: 14px !important;
+  }
+  .work-companies p {
+    font-size: 14px;
   }
 }
 
@@ -636,6 +656,11 @@ body {
   color: #d1d5db;
   margin-top: 3px;
 }
+@media screen and (max-width: 450px) {
+  .project-card p {
+     font-size: 13px;
+  }
+}
 
 .viewmore-btn {
   background-color: transparent;
@@ -713,6 +738,11 @@ body {
   color: #fff;
   font-size: 14px;
 }
+@media screen and (max-width:450px) {
+  .experience-point  {
+    font-size: 13px;
+  }
+}
 
 .experience-point::before {
   content: '•';
@@ -781,6 +811,14 @@ body {
 }
 .footer-content p {
   font-size: 14px;
+}
+@media screen and (max-width:450px) {
+  .footer-content p  {
+    font-size: 8px;
+  }
+  .footer-content img {
+   height: 30px;
+  }
 }
 .footer-highlight {
  color: #84cc16;
