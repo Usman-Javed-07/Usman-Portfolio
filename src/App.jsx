@@ -14,6 +14,7 @@ import {
 import { PiLineVerticalThin } from "react-icons/pi";
 import { MdEmail } from "react-icons/md";
 import Typewriter from "./Typewriter.jsx";
+import ExperienceCard from "./ExperienceCard";
 
 const projectsData = [
   {
@@ -177,18 +178,41 @@ const projectsData = [
       "Airline is a full-stack web application featuring dedicated panels for users, admins, and employees. Users can book tickets, choose travel classes (Economy, Business, Luxury), select meals, arrange taxis for arrival or departure, and manage luggage. The system supports secure online payments, route management, and ticket cancellation up to one day before the flight.",
   },
 ];
-
-const points = [
-  "Led end-to-end development of full stack web applications using React, Node.js, Express.js, and MongoDB/MySQL for real-world projects and practice-based learning.",
-  "Built and deployed multiple frontend interfaces focusing on responsive design, user experience, and component reusability with modern JavaScript and CSS frameworks.",
-  "Designed and implemented RESTful APIs and handled backend logic including authentication, CRUD operations, and database integration.",
-  "Developed and maintained full stack projects, connecting frontend and backend seamlessly to demonstrate dynamic data flow and user interaction.",
-  "Collaborated in Git-based workflows, managing branches, pull requests, and version control across projects for better team coordination and deployment readiness.",
-  "Participated in code reviews, debugging, and optimization, improving performance and code quality across all developed modules.",
-  "Worked closely with mentors and peers in Agile-style development cycles, consistently meeting feature delivery targets and deadlines.",
-  "Gained hands-on experience in API integration, secure login (JWT), data validation, and deployment processes on platforms like Render and Vercel.",
-  "Practiced translating UI/UX designs from tools like Figma into live interactive components, adhering to accessibility and usability best practices.",
-  "Explored and applied modern development practices including state management, form handling, and responsive grid systems to enhance user interaction.",
+const experiences = [
+    {
+    logo: "./images/zbeelogo.png",
+    alt: "zbee tech",
+    dateRange: "Dec 2024 - present",
+    title: "Frontend Developer",
+    points: [
+      "Worked as a Full Stack Developer on high-impact projects for enterprise clients using React, Angular, Node.js, and React Native.",
+      "Developed frontend user interfaces with HTML, CSS, Tailwind, and vanilla JavaScript, ensuring responsive design and accessibility.",
+      "Integrated Stripe payment gateway into web applications to enable secure online transactions.",
+      "Built scalable backend services using Node.js and Express, with RESTful APIs for seamless frontend-backend communication.",
+      "Collaborated in cross-functional teams to deliver full lifecycle software solutions, from architecture to deployment.",
+      "Handled both client-facing UI components and backend logic, contributing to complete end-to-end development pipelines.",
+      "Debugged, tested, and optimized applications for performance, responsiveness, and usability across multiple platforms.",
+      "Maintained clean, reusable codebases with Git version control and agile collaboration methods.",
+    ],
+  },
+  {
+    logo: "./images/solslogo.png",
+    alt: "Sols",
+    dateRange: "Aug 2024 - Nov 2024",
+    title: "Full Stack Developer",
+    points: [
+      "Led end-to-end development of full stack web applications using React, Node.js, Express.js, and MongoDB/MySQL for real-world projects and practice-based learning.",
+      "Built and deployed multiple frontend interfaces focusing on responsive design, user experience, and component reusability with modern JavaScript and CSS frameworks.",
+      "Designed and implemented RESTful APIs and handled backend logic including authentication, CRUD operations, and database integration.",
+      "Developed and maintained full stack projects, connecting frontend and backend seamlessly to demonstrate dynamic data flow and user interaction.",
+      "Collaborated in Git-based workflows, managing branches, pull requests, and version control across projects for better team coordination and deployment readiness.",
+      "Participated in code reviews, debugging, and optimization, improving performance and code quality across all developed modules.",
+      "Worked closely with mentors and peers in Agile-style development cycles, consistently meeting feature delivery targets and deadlines.",
+      "Gained hands-on experience in API integration, secure login (JWT), data validation, and deployment processes on platforms like Render and Vercel.",
+      "Practiced translating UI/UX designs from tools like Figma into live interactive components, adhering to accessibility and usability best practices.",
+      "Explored and applied modern development practices including state management, form handling, and responsive grid systems to enhance user interaction.",
+    ],
+  },
 ];
 
 const ProjectCard = ({ project }) => (
@@ -206,7 +230,6 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showAll, setShowAll] = useState(false);
   const visibleProjects = showAll ? projectsData : projectsData.slice(0, 4);
-  const visiblePoints = showAll ? points : points.slice(0, 4);
 
   return (
     <>
@@ -554,48 +577,27 @@ function App() {
         </div>
 
         <div className="experience-container">
-          <div className="experience-card">
-            <div className="company-logo--img">
-              <img src="./images/solslogo.png" alt="sols" />
-              <div className="work-months">
-                <p>Aug 2024 - Nov 2024</p>
-                <h4>Full stack developer</h4>
-              </div>
-            </div>
-            <div className="work-description">
-              <div className="experience-container">
-                <ul className="experience-list">
-                  {visiblePoints.map((point, index) => (
-                    <li key={index} className="experience-point">
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  onClick={() => setShowAll(!showAll)}
-                  className="toggle-btn resume"
-                >
-                  {showAll ? "Close" : "Read More"}
-                  <span className="arrow">
-                    <FaLongArrowAltRight />
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
+          {experiences.map((exp, idx) => (
+            <ExperienceCard key={idx} {...exp} />
+          ))}
         </div>
       </section>
 
       <footer>
         <div className="footer-content">
-         <img src="./images/logo.png" alt="Footer Logo" />
-         <p>Designed loosely in <span className="footer-highlight">Figma</span> and coded in <span className="footer-highlight">VS Code</span>  by yours very truly, <br />
-          Fully <span className="footer-highlight">responsive</span> and optimized across all the devices. <br />
-          built using <span className="footer-highlight">React</span> and  <span className="footer-highlight">css</span>, deployed to <span className="footer-highlight">Netlify</span>.
-         </p>
-         <p>&copy; 2025 Usman Javed</p>
+          <img src="./images/logo.png" alt="Footer Logo" />
+          <p>
+            Designed loosely in <span className="footer-highlight">Figma</span>{" "}
+            and coded in <span className="footer-highlight">VS Code</span> by
+            yours very truly, <br />
+            Fully <span className="footer-highlight">responsive</span> and
+            optimized across all the devices. <br />
+            built using <span className="footer-highlight">React</span> and{" "}
+            <span className="footer-highlight">css</span>, deployed to{" "}
+            <span className="footer-highlight">Netlify</span>.
+          </p>
+          <p>&copy; 2025 Usman Javed</p>
         </div>
-
       </footer>
     </>
   );
