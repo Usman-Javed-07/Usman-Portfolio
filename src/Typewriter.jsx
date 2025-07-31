@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react';
 
-const Typewriter = ({ text = '', speed = 100, delay = 1500 }) => {
+const Typewriter = ({ texts = [], speed = 100, delay = 1500 }) => {
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
+  const [loopIndex, setLoopIndex] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(speed);
 
   useEffect(() => {
     let typingTimeout;
 
-    const handleTyping = () => {
-      const fullText = text;
+    const fullText = texts[loopIndex % texts.length];
 
+    const handleTyping = () => {
       if (!isDeleting) {
         if (displayedText.length < fullText.length) {
           setDisplayedText(prev => fullText.substring(0, prev.length + 1));
           setTypingSpeed(speed);
         } else {
-          // Pause before deleting
           typingTimeout = setTimeout(() => setIsDeleting(true), delay);
           return;
         }
@@ -25,9 +25,8 @@ const Typewriter = ({ text = '', speed = 100, delay = 1500 }) => {
           setDisplayedText(prev => fullText.substring(0, prev.length - 1));
           setTypingSpeed(speed / 1.5);
         } else {
-          // Pause before typing again
-          typingTimeout = setTimeout(() => setIsDeleting(false), 300);
-          return;
+          setIsDeleting(false);
+          setLoopIndex(prev => prev + 1); // move to next text
         }
       }
 
@@ -37,7 +36,7 @@ const Typewriter = ({ text = '', speed = 100, delay = 1500 }) => {
     typingTimeout = setTimeout(handleTyping, typingSpeed);
 
     return () => clearTimeout(typingTimeout);
-  }, [displayedText, isDeleting, text, speed, delay, typingSpeed]);
+  }, [displayedText, isDeleting, loopIndex, texts, speed, delay, typingSpeed]);
 
   return (
     <span

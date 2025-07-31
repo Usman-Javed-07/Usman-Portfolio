@@ -336,8 +336,9 @@ function App() {
               </span>
             </span>
             <p className="header-para">
-              Full Stack <Typewriter text="Web Developer" />
-            </p>
+  <Typewriter texts={["Full Stack Web Developer", "MERN Stack Developer"]} />
+</p>
+
           </div>
         </section>
 
