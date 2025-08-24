@@ -60,7 +60,7 @@ body {
 .navbar {
   position: relative;
   z-index: 1;
-  height: 90vh;
+  /* height: 90vh; */
   max-width: 1600px;
   margin:  0 auto;
 }
@@ -68,7 +68,7 @@ body {
 .navbar::before {
   content: "";
   position: absolute;
-  top: -280px;
+  top: -450px;
   left: 0;
   width: 300px;
   height: 120%;
@@ -462,9 +462,9 @@ body {
   margin-top: 90px;
   padding: 100px;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 7000px) {
   .main-content {
-    margin-top: 140px;
+    margin-top: -195px;
   }
   
 }
@@ -517,9 +517,9 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
-  .main-content {
+  /* .main-content {
     margin-top: 225px;
-  }
+  } */
   .about-para {
     padding: 40px 100px 0px 100px;
   }
@@ -527,7 +527,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .main-content {
-    margin-top: -25px;
+    margin-top: -156px;
   }
   .about-para {
     padding: 40px 10px 0px 10px;
@@ -542,7 +542,7 @@ body {
     padding: 10px;
   }
   .main-content {
-    margin-top: 90px;
+    margin-top: -101px;
     padding: 45px;
   }
   .about-para {
@@ -573,6 +573,15 @@ body {
   .my-accounts ul {
     margin-left: -22px;
     gap: 20px;
+  }
+   .main-content {
+    margin-top: -102px;
+  }
+}
+@media screen and (max-width: 321px) {
+
+   .main-content {
+    margin-top: -90px;
   }
 }
 
