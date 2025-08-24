@@ -117,7 +117,7 @@ body {
   }
 
   .navbar-container {
-    padding: 10px 10px;
+    padding: 10px 30px;
   }
   .logo-image {
     width: 40px;
@@ -131,6 +131,12 @@ body {
     width: 100px;
     height: 70%;
     transform: skewX(40deg);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navbar::before {
+    top: -190px;
   }
 }
 
@@ -186,11 +192,11 @@ body {
 }
 @media screen and (max-width: 500px) {
   .header-para {
-    padding: 40px;
+    padding: 30px;
     font-size: 16px;
   }
   .header-heading {
-    font-size: 32px;
+    font-size: 26px;
   }
   .hero {
     margin-top: -30px;
@@ -787,7 +793,7 @@ body {
 }
 @media screen and (max-width: 500px) {
   .experience-container {
-    padding: 20px;
+    padding: 50px;
   }
   
 }

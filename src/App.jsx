@@ -185,7 +185,7 @@ const experiences = [
     logo: "./images/zbeelogo.png",
     alt: "zbee tech",
     dateRange: "Dec 2024 - present",
-    title: "Full stack Developer",
+    title: "Full stack Developer ( MERN stack Developer )",
     points: [
       "Worked as a Full Stack Developer on high-impact projects for enterprise clients using React, Angular, Node.js, and React Native.",
       "Developed frontend user interfaces with HTML, CSS, Tailwind, and vanilla JavaScript, ensuring responsive design and accessibility.",
