@@ -662,8 +662,8 @@ body {
 }
 .project-card a {
   text-decoration: none;
-  position: relative;
-  top: -10px;
+  /* position: relative;
+  top: -10px; */
   color: #3b82f6;
   font-size: 0.9rem;
 }
@@ -883,4 +883,25 @@ body {
     margin-left: 8px;
   }
   
+}
+
+.Private-repo {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  top: -10px;
+}
+@media screen and (max-width: 500px) {
+  .Private-repo {
+    flex-direction: column;
+    max-width: 160px;
+  }
+}
+.repo-style {
+    font-size: 12px;
+    padding: 8px 15px;
+    background-color: rgba(255, 0, 0, 0.18);
+    border-radius: 40px;
+    position: relative;
+    top: -6px;
 }

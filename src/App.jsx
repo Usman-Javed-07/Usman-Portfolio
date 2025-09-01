@@ -24,7 +24,6 @@ const projectsData = [
     title: "Private Artwork Management",
     link: "https://github.com/Usman-Javed-07/Artwork-management-frontend",
     displayLink: "Artwork.Management.com",
-    text: "Private Repository",
     description:
       "Developed a Private Artwork Management System with features such as user authentication, artwork creation, editing, deletion, and advanced filter and search options by title, name, year, category, technique, location, and medium. Each user can view and manage only their own artworks with secure login, password updates, and detailed view pages. Admin has full control over user accounts, including accepting or declining new requests, banning users, and updating user passwords. Users cannot log in until their account is approved by the admin. Implemented protected routes with role-based access, where moderators and users only see the routes allowed for their role during login. Built using React, Node.js, Express.js, MySQL, and CSS.",
   },
@@ -33,6 +32,7 @@ const projectsData = [
     title: "Slot Machine",
     link: "https://github.com/Usman-Javed-07/Slot-machine",
     displayLink: "slotmachine.com",
+    text: "Private Repository",
     description:
       "Developed a Slot Machine game with smooth animations and responsive UI, focusing on interactive design and realtime feedback. Implemented spin functionality with randomized outcomes, a Winning Amount modal to display results after each spin, a Mega Win modal that appears only when the winning amount is greater than 600, and a Free Spin feature where the slot machine automatically spins for the awarded free spins. Designed with a clean component-based architecture for scalability and easy maintenance. Built using ReactJS, Vite, and CSS.",
   },
@@ -59,6 +59,7 @@ const projectsData = [
     title: "4 week Qtr",
     link: "https://github.com/Usman-Javed-07/4-week-qtr",
     displayLink: "weekQtr.com",
+    text: "Private Repository",
     description:
       "Built a 4-Week-Qtr Goal Tracker that allows users to create and manage weekly goals while keeping track of their progress over time. The system sends notifications four times a day based on the user’s goal date, helping them stay on track and consistent. It includes secure authentication, goal management features like add, edit, and delete, and real-time reminders for better productivity. Designed with a clean and responsive interface to make goal tracking simple and effective. Developed using Angular, Node.js,Express.js, CSS and MySQL..",
   },
@@ -83,6 +84,7 @@ const projectsData = [
     title: "XRCHIV",
     link: "https://github.com/Usman-Javed-07/Xarchive",
     displayLink: "xrchiv.com",
+    text: "Private Repository",
     description:
       "XRCHIV is a application built for efficient data management and visualization. The project provides a streamlined user interface with robust features for creating, viewing, and managing data archives.",
   },
@@ -99,6 +101,7 @@ const projectsData = [
     title: "character image",
     link: "https://github.com/Usman-Javed-07/character-image-backend",
     displayLink: "character-image.com",
+    text: "Private Repository",
     description:
       "Character Image is a Shopify store where users can browse and purchase merchandise featuring their favorite characters. It offers a fun and personalized shopping experience for fans of all kinds.",
   },
@@ -107,6 +110,7 @@ const projectsData = [
     title: "atlas-ai",
     link: "https://github.com/Usman-Javed-07/atlasAi",
     displayLink: "atlas-ai.com",
+    text: "Private Repository",
     description:
       "This application enables users to interact with an AI through text or voice, choose from a variety of AI personas, and seamlessly send emails via the Gmail API.",
   },
@@ -114,6 +118,7 @@ const projectsData = [
     image: "./images/zbeelogo.png",
     title: "Clothing Store",
     link: "https://github.com/Usman-Javed-07/clothing-store-backend",
+    text: "Private Repository",
     displayLink: "ClothingStore.com",
     description:
       "Built a full featured e-commerce clothing store with user authentication, protected routes for users, a shopping cart, checkout system, and an admin panel to manage products, orders, and users. Added search functionality to help users find products easily and designed a responsive interface that works smoothly with the backend for a better shopping experience. Developed using HTML, CSS, JavaScript, Node.js, Express.js and MySQL.",
@@ -123,6 +128,7 @@ const projectsData = [
     title: "Opic 3D",
     link: "https://github.com/Usman-Javed-07/Opic-3D",
     displayLink: "opic3d.com",
+    text: "Private Repository",
     description:
       "Opic 3D is a mobile app similar to TikTok, allowing users to create, share, and explore engaging short-form 3D videos.",
   },
@@ -224,12 +230,15 @@ const ProjectCard = ({ project }) => (
   <div className="project-card">
     <img src={project.image} alt={project.title} />
     <h4>{project.title}</h4>
-    <div>
-<a href={project.link} target="_blank" rel="noopener noreferrer">
-      {project.displayLink}
-    </a>
-    {/* <span>{project.text}</span> */}
-    </div>
+    <div className="Private-repo">
+  <a href={project.link} target="_blank" rel="noopener noreferrer">
+    {project.displayLink}
+  </a>
+  {project.text && (
+    <span className="repo-style">{project.text}</span>
+  )}
+</div>
+
     
     <p>{project.description}</p>
   </div>
