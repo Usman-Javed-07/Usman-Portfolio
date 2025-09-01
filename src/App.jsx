@@ -276,7 +276,7 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaWhatsapp />
+                <FaWhatsapp /> <p className="sidebar-link-text">WhatsApp</p>
               </a>
             </li>
             <li>
@@ -285,7 +285,7 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MdEmail />
+                <MdEmail /> <p className="sidebar-link-text">Email</p>
               </a>
             </li>
             <li>
@@ -294,7 +294,7 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaGithub />
+                <FaGithub /> <p className="sidebar-link-text">GitHub</p>
               </a>
             </li>
             <li>
@@ -303,7 +303,7 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLinkedin />
+                <FaLinkedin /> <p className="sidebar-link-text">LinkedIn</p>
               </a>
             </li>
             <li className="resume-link">

@@ -29,7 +29,10 @@ body {
   text-decoration: none;
   color: #fff;
   transition: color 0.3s ease, transform 0.5s ease;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
 }
 .navbar-links a:hover {
   color: #84cc16;
@@ -104,7 +107,8 @@ body {
     overflow: hidden;
     opacity: 0;
     transform: translateY(-10px);
-    transition: max-height 1.4s ease, opacity 2.4s ease, transform 1.4s ease;
+    transition: max-height 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
+
     display: flex;
     z-index: 999; 
     backdrop-filter: blur(10px);
@@ -861,4 +865,16 @@ body {
 }
 .scroll-to-top:hover {
   background: #ffffffd7;
+}
+
+.sidebar-link-text {
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  .sidebar-link-text {
+    display: inline;
+    font-size: 14px;
+    margin-left: 8px;
+  }
+  
 }
