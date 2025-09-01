@@ -19,45 +19,48 @@ import Typewriter from "./Typewriter.jsx";
 import ExperienceCard from "./ExperienceCard";
 
 const projectsData = [
+    {
+    image: "./images/zbeelogo.png",
+    title: "Private Artwork Management",
+    link: "https://github.com/Usman-Javed-07/Artwork-management-frontend",
+    displayLink: "Artwork.Management.com",
+    text: "Private Repository",
+    description:
+      "Developed a Private Artwork Management System with features such as user authentication, artwork creation, editing, deletion, and advanced filter and search options by title, name, year, category, technique, location, and medium. Each user can view and manage only their own artworks with secure login, password updates, and detailed view pages. Admin has full control over user accounts, including accepting or declining new requests, banning users, and updating user passwords. Users cannot log in until their account is approved by the admin. Implemented protected routes with role-based access, where moderators and users only see the routes allowed for their role during login. Built using React, Node.js, Express.js, MySQL, and CSS.",
+  },
+ {
+    image: "./images/zbeelogo.png",
+    title: "Slot Machine",
+    link: "https://github.com/Usman-Javed-07/Slot-machine",
+    displayLink: "slotmachine.com",
+    description:
+      "Developed a Slot Machine game with smooth animations and responsive UI, focusing on interactive design and realtime feedback. Implemented spin functionality with randomized outcomes, a Winning Amount modal to display results after each spin, a Mega Win modal that appears only when the winning amount is greater than 600, and a Free Spin feature where the slot machine automatically spins for the awarded free spins. Designed with a clean component-based architecture for scalability and easy maintenance. Built using ReactJS, Vite, and CSS.",
+  },
   {
     image: "./images/solslogo.png",
     title: "Cara E-commerce website",
     link: "https://github.com/Usman-Javed-07/Html-Css-design-6",
     displayLink: "caraEcom.com",
     description:
-      "Cara is a modern online shopping platform specializing in fashionable clothing. Customers can explore a wide range of trendy outfits for men, women, and kids. With a user-friendly interface and secure checkout.",
+      "Cara is an e-commerce website with a simple and responsive design. It includes features like adding and removing items from the cart, saving products to favorites, checkout, and payment options. Users can search for products, apply filters, and browse easily with a smooth shopping experience. Built using HTML, CSS, JavaScript, Node.js, Express.js, Tailwind CSS, CSS and MongoDB..",
   },
-  {
-    image: "./images/zbeelogo.png",
-    title: "Private Artwork Management",
-    link: "https://github.com/Usman-Javed-07/Artwork-management-frontend",
-    displayLink: "Artwork.Management.com",
-    description:
-      "Private Artwork Management is an art-focused website showcasing a diverse collection of unique artworks. It features creative pieces inspired by everyday objects like cups, paper, and floral themes.",
-  },
+
   {
     image: "./images/freelancerlogo.png",
     title: "Ai Mental Health Therapist",
     link: "https://github.com/Usman-Javed-07/Ai-mental-Health-Frontend",
     displayLink: "AiMHT.com",
     description:
-      "AI Mental Health Therapist is a virtual assistant that helps you understand and manage stress, anxiety, and depression. It offers quick, personalized support for better mental well-being.",
+      "Built a Mental Health Therapist platform that provides users with an AI-powered chatbot to support their mental health concerns. Users can ask about stress, anxiety, or depression and receive personalized responses. The platform also recommends songs, videos, and articles based on each user’s needs, offering a holistic approach to mental well-being. Developed using React, Node.js,Express.js, CSS and MongoDB.",
   },
-  {
-    image: "./images/zbeelogo.png",
-    title: "Slot Machine",
-    link: "https://github.com/Usman-Javed-07/Slot-machine",
-    displayLink: "slotmachine.com",
-    description:
-      "Slot Machine is a engaging game that simulates the experience of playing a real slot machine. Spin the reels and try your luck to win exciting prizes and rewards.",
-  },
+ 
   {
     image: "./images/zbeelogo.png",
     title: "4 week Qtr",
     link: "https://github.com/Usman-Javed-07/4-week-qtr",
     displayLink: "weekQtr.com",
     description:
-      "4 Week QTR is a personalized routine management project where users can set monthly goals, daily targets, and receive 3 customizable notifications per day at preferred times.",
+      "Built a 4-Week-Qtr Goal Tracker that allows users to create and manage weekly goals while keeping track of their progress over time. The system sends notifications four times a day based on the user’s goal date, helping them stay on track and consistent. It includes secure authentication, goal management features like add, edit, and delete, and real-time reminders for better productivity. Designed with a clean and responsive interface to make goal tracking simple and effective. Developed using Angular, Node.js,Express.js, CSS and MySQL..",
   },
   {
     image: "./images/solslogo.png",
@@ -65,7 +68,7 @@ const projectsData = [
     link: "https://github.com/Usman-Javed-07/quizzicalApp",
     displayLink: "quizzical.com",
     description:
-      "Quizzical is a quiz app with subjects like Computer Science, Music, Animals, Sports, and more. It shows user scores and correct answers at the end, helping users test and improve their knowledge.",
+      " Built a dynamic quiz application that fetches data from an API and provides multiple categories including Entertainment, Music, Education, and Cricket. Implemented randomized question selection to ensure a unique experience each time the quiz is taken. Added functionality to calculate and display the final score out of the total marks at the end of the quiz. Developed using JavaScript, HTML, CSS, and Tailwind CSS.",
   },
   {
     image: "./images/solslogo.png",
@@ -113,7 +116,7 @@ const projectsData = [
     link: "https://github.com/Usman-Javed-07/clothing-store-backend",
     displayLink: "ClothingStore.com",
     description:
-      "Clothing Store is an e-commerce website where users can browse and purchase apparel online, add items to their cart, and complete secure payments with ease.",
+      "Built a full featured e-commerce clothing store with user authentication, protected routes for users, a shopping cart, checkout system, and an admin panel to manage products, orders, and users. Added search functionality to help users find products easily and designed a responsive interface that works smoothly with the backend for a better shopping experience. Developed using HTML, CSS, JavaScript, Node.js, Express.js and MySQL.",
   },
   {
     image: "./images/zbeelogo.png",
@@ -221,9 +224,13 @@ const ProjectCard = ({ project }) => (
   <div className="project-card">
     <img src={project.image} alt={project.title} />
     <h4>{project.title}</h4>
-    <a href={project.link} target="_blank" rel="noopener noreferrer">
+    <div>
+<a href={project.link} target="_blank" rel="noopener noreferrer">
       {project.displayLink}
     </a>
+    {/* <span>{project.text}</span> */}
+    </div>
+    
     <p>{project.description}</p>
   </div>
 );
@@ -309,7 +316,7 @@ function App() {
             <li className="resume-link">
               <a
                 className="resume"
-                href="/Usman javed(web developer).pdf"
+                href="/Usman Javed (Software Engineer).pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >

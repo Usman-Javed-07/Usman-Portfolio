@@ -777,6 +777,12 @@ body {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 320px) {
+  .company-logo--img {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .company-logo--img img {
   width: 80px;
   height: auto;
