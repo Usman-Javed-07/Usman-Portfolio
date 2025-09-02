@@ -905,3 +905,64 @@ body {
     position: relative;
     top: -6px;
 }
+
+/* add in App.css */
+.tooltip-box {
+  position: absolute;
+  top: -194px;
+  left: 35%;
+  transform: translateX(-50%);
+  background: #588b05;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  width: 450px;
+  font-size: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+@media screen and (max-width: 1024px) {
+  .tooltip-box {
+    width: 350px;
+    top: -215px;
+    left: 45%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .tooltip-box {
+    width: 350px;
+    top: -215px;
+    left: 110%;
+  }
+}
+
+@media screen and (max-width: 378px) {
+  .tooltip-box {
+    width: 220px;
+    top: -240px;
+    left:74%;
+  }
+  .modal-heading {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .tooltip-box {
+    width: 170px;
+    top: -235px;
+    left:59%;
+  }
+  .modal-heading {
+    font-size: 10px;
+  }
+}
+.tooltip-box::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: #fff;
+}

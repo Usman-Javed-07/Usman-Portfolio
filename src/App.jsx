@@ -13,6 +13,7 @@ import {
   FaLessThan,
   FaArrowUp,
 } from "react-icons/fa";
+import { RiChatPrivateFill } from "react-icons/ri";
 import { PiLineVerticalThin } from "react-icons/pi";
 import { MdEmail } from "react-icons/md";
 import Typewriter from "./Typewriter.jsx";
@@ -226,23 +227,44 @@ const experiences = [
   },
 ];
 
-const ProjectCard = ({ project }) => (
-  <div className="project-card">
-    <img src={project.image} alt={project.title} />
-    <h4>{project.title}</h4>
-    <div className="Private-repo">
-  <a href={project.link} target="_blank" rel="noopener noreferrer">
-    {project.displayLink}
-  </a>
-  {project.text && (
-    <span className="repo-style">{project.text}</span>
-  )}
-</div>
+const ProjectCard = ({ project }) => {
+  const [showModal, setShowModal] = useState(false);
 
-    
-    <p>{project.description}</p>
-  </div>
-);
+  return (
+    <div className="project-card">
+      <img src={project.image} alt={project.title} />
+      <h4>{project.title}</h4>
+
+      <div className="Private-repo">
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          onMouseEnter={() => project.text && setShowModal(true)}
+          onMouseLeave={() => setShowModal(false)}
+        >
+          {project.displayLink}
+        </a>
+
+        {project.text && <span className="repo-style">{project.text}</span>}
+
+        {/* Tooltip Modal */}
+        {showModal && (
+          <div className=" tooltip-box">
+            <h2 className="model-heading">
+              <RiChatPrivateFill style={{ marginRight: "8px", fontSize: "2.25rem", position: "relative", top: "10px" }} /> Private Repository
+            </h2>
+            <p>
+              This repository contains confidential data and personal credentials. Unfortunately, the code cannot be shared publicly. Thank you for understanding.
+            </p>
+          </div>
+        )}
+      </div>
+
+      <p>{project.description}</p>
+    </div>
+  );
+};
 
 
 function App() {
