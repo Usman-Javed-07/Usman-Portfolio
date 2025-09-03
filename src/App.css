@@ -924,7 +924,7 @@ body {
 @media screen and (max-width: 1024px) {
   .tooltip-box {
     width: 350px;
-    top: -215px;
+    top: -255px;
     left: 45%;
   }
 }
@@ -936,10 +936,18 @@ body {
   }
 }
 
+@media screen and (max-width: 426px) {
+  .tooltip-box {
+    width: 280px;
+    top: -265px;
+    left: 90%;
+  }
+}
+
 @media screen and (max-width: 378px) {
   .tooltip-box {
     width: 220px;
-    top: -240px;
+    top: -278px;
     left:74%;
   }
   .modal-heading {
@@ -949,7 +957,7 @@ body {
 @media screen and (max-width: 330px) {
   .tooltip-box {
     width: 170px;
-    top: -235px;
+    top: -305px;
     left:59%;
   }
   .modal-heading {
@@ -965,4 +973,18 @@ body {
   width: 12px;
   height: 12px;
   background: #fff;
+}
+
+.modal-close-btn {
+  background: #588b05;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+  left: -10px;
 }

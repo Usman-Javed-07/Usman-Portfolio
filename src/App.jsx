@@ -14,13 +14,14 @@ import {
   FaArrowUp,
 } from "react-icons/fa";
 import { RiChatPrivateFill } from "react-icons/ri";
+import { IoIosCloseCircle } from "react-icons/io";
 import { PiLineVerticalThin } from "react-icons/pi";
 import { MdEmail } from "react-icons/md";
 import Typewriter from "./Typewriter.jsx";
 import ExperienceCard from "./ExperienceCard";
 
 const projectsData = [
-    {
+  {
     image: "./images/zbeelogo.png",
     title: "Private Artwork Management",
     link: "https://github.com/Usman-Javed-07/Artwork-management-frontend",
@@ -28,7 +29,7 @@ const projectsData = [
     description:
       "Developed a Private Artwork Management System with features such as user authentication, artwork creation, editing, deletion, and advanced filter and search options by title, name, year, category, technique, location, and medium. Each user can view and manage only their own artworks with secure login, password updates, and detailed view pages. Admin has full control over user accounts, including accepting or declining new requests, banning users, and updating user passwords. Users cannot log in until their account is approved by the admin. Implemented protected routes with role-based access, where moderators and users only see the routes allowed for their role during login. Built using React, Node.js, Express.js, MySQL, and CSS.",
   },
- {
+  {
     image: "./images/zbeelogo.png",
     title: "Slot Machine",
     link: "https://github.com/Usman-Javed-07/Slot-machine",
@@ -54,7 +55,7 @@ const projectsData = [
     description:
       "Built a Mental Health Therapist platform that provides users with an AI-powered chatbot to support their mental health concerns. Users can ask about stress, anxiety, or depression and receive personalized responses. The platform also recommends songs, videos, and articles based on each user’s needs, offering a holistic approach to mental well-being. Developed using React, Node.js,Express.js, CSS and MongoDB.",
   },
- 
+
   {
     image: "./images/zbeelogo.png",
     title: "4 week Qtr",
@@ -191,7 +192,7 @@ const projectsData = [
   },
 ];
 const experiences = [
-    {
+  {
     logo: "./images/zbeelogo.png",
     alt: "zbee tech",
     dateRange: "Dec 2024 - present",
@@ -229,6 +230,19 @@ const experiences = [
 
 const ProjectCard = ({ project }) => {
   const [showModal, setShowModal] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    // Detect if device supports touch (mobile/tablet)
+    setIsTouchDevice("ontouchstart" in window || navigator.maxTouchPoints > 0);
+  }, []);
+
+  const handleClick = (e) => {
+    if (isTouchDevice && project.text) {
+      e.preventDefault(); // stop link opening immediately
+      setShowModal(true);
+    }
+  };
 
   return (
     <div className="project-card">
@@ -240,8 +254,11 @@ const ProjectCard = ({ project }) => {
           href={project.link}
           target="_blank"
           rel="noopener noreferrer"
-          onMouseEnter={() => project.text && setShowModal(true)}
-          onMouseLeave={() => setShowModal(false)}
+          onMouseEnter={() =>
+            !isTouchDevice && project.text && setShowModal(true)
+          }
+          onMouseLeave={() => !isTouchDevice && setShowModal(false)}
+          onClick={handleClick} // for touch devices
         >
           {project.displayLink}
         </a>
@@ -250,13 +267,31 @@ const ProjectCard = ({ project }) => {
 
         {/* Tooltip Modal */}
         {showModal && (
-          <div className=" tooltip-box">
-            <h2 className="model-heading">
-              <RiChatPrivateFill style={{ marginRight: "8px", fontSize: "2.25rem", position: "relative", top: "10px" }} /> Private Repository
+          <div className="tooltip-box">
+            <h2 className="modal-heading">
+              <RiChatPrivateFill
+                style={{
+                  marginRight: "8px",
+                  fontSize: "2.25rem",
+                  position: "relative",
+                  top: "10px",
+                }}
+              />
+              Private Repository
             </h2>
             <p>
-              This repository contains confidential data and personal credentials. Unfortunately, the code cannot be shared publicly. Thank you for understanding.
+              This repository contains confidential data and personal
+              credentials. Unfortunately, the code cannot be shared publicly.
+              Thank you for understanding.
             </p>
+            {isTouchDevice && (
+              <button
+                onClick={() => setShowModal(false)}
+                className="modal-close-btn"
+              >
+                <IoIosCloseCircle />
+              </button>
+            )}
           </div>
         )}
       </div>
@@ -265,7 +300,6 @@ const ProjectCard = ({ project }) => {
     </div>
   );
 };
-
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -374,9 +408,10 @@ function App() {
               </span>
             </span>
             <p className="header-para">
-  <Typewriter texts={["Full Stack Web Developer", "MERN Stack Developer"]} />
-</p>
-
+              <Typewriter
+                texts={["Full Stack Web Developer", "MERN Stack Developer"]}
+              />
+            </p>
           </div>
         </section>
 
@@ -523,10 +558,10 @@ function App() {
           <h1 className="about-heading">{"}"} </h1>
         </section>
         {showScroll && (
-  <button className="scroll-to-top" onClick={scrollToTop}>
-    <FaArrowUp />
-  </button>
-)}
+          <button className="scroll-to-top" onClick={scrollToTop}>
+            <FaArrowUp />
+          </button>
+        )}
       </main>
 
       <section className="work-section">
@@ -645,11 +680,16 @@ function App() {
           {experiences.map((exp, idx) => (
             <ExperienceCard key={idx} {...exp} />
           ))}
-         <p
-              style={{ fontSize: "24px", fontWeight: 500, marginLeft: "5px", color:"#fff" }}
-            >
-              {"}"}{" "}
-            </p>
+          <p
+            style={{
+              fontSize: "24px",
+              fontWeight: 500,
+              marginLeft: "5px",
+              color: "#fff",
+            }}
+          >
+            {"}"}{" "}
+          </p>
         </div>
       </section>
 
