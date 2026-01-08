@@ -24,7 +24,7 @@ const projectsData = [
   {
     image: "./images/zbeelogo.png",
     title: "Private Artwork Management",
-    link: "https://github.com/Usman-Javed-07/Artwork-management-frontend",
+    link: "https://artwork.zbeetech.com/",
     displayLink: "Artwork.Management.com",
     description:
       "Developed a Private Artwork Management System with features such as user authentication, artwork creation, editing, deletion, and advanced filter and search options by title, name, year, category, technique, location, and medium. Each user can view and manage only their own artworks with secure login, password updates, and detailed view pages. Admin has full control over user accounts, including accepting or declining new requests, banning users, and updating user passwords. Users cannot log in until their account is approved by the admin. Implemented protected routes with role-based access, where moderators and users only see the routes allowed for their role during login. Built using React, Node.js, Express.js, MySQL, and CSS.",
@@ -59,9 +59,9 @@ const projectsData = [
   {
     image: "./images/zbeelogo.png",
     title: "4 week Qtr",
-    link: "https://github.com/Usman-Javed-07/4-week-qtr",
+    link: "https://4weekqtr.com/",
     displayLink: "weekQtr.com",
-    text: "Private Repository",
+    // text: "Private Repository",
     description:
       "Built a 4-Week-Qtr Goal Tracker that allows users to create and manage weekly goals while keeping track of their progress over time. The system sends notifications four times a day based on the user’s goal date, helping them stay on track and consistent. It includes secure authentication, goal management features like add, edit, and delete, and real-time reminders for better productivity. Designed with a clean and responsive interface to make goal tracking simple and effective. Developed using Angular, Node.js,Express.js, CSS and MySQL..",
   },
