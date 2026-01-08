@@ -34,9 +34,9 @@
   height: 2px;
   background: linear-gradient(90deg,
     transparent 0%,
-    rgba(255, 107, 53, 0.6) 20%,
-    rgba(255, 165, 0, 0.8) 50%,
-    rgba(255, 107, 53, 0.6) 80%,
+    rgba(132, 204, 22, 0.6) 20%,
+    rgba(163, 230, 53, 0.8) 50%,
+    rgba(132, 204, 22, 0.6) 80%,
     transparent 100%
   );
   transform: scaleX(0);
@@ -84,11 +84,11 @@
   height: 1.1em;
   background: linear-gradient(
     180deg,
-    rgba(255, 107, 53, 0.2) 0%,
-    rgba(255, 107, 53, 1) 20%,
-    rgba(255, 165, 0, 1) 50%,
-    rgba(255, 107, 53, 1) 80%,
-    rgba(255, 107, 53, 0.2) 100%
+    rgba(132, 204, 22, 0.2) 0%,
+    rgba(132, 204, 22, 1) 20%,
+    rgba(163, 230, 53, 1) 50%,
+    rgba(132, 204, 22, 1) 80%,
+    rgba(132, 204, 22, 0.2) 100%
   );
   margin-left: 3px;
   border-radius: 2px;
@@ -96,9 +96,9 @@
   animation: cursorBlink 1.2s cubic-bezier(0.4, 0, 0.6, 1) infinite,
              cursorPulse 2s ease-in-out infinite;
   box-shadow:
-    0 0 10px rgba(255, 107, 53, 0.6),
-    0 0 20px rgba(255, 107, 53, 0.4),
-    0 0 30px rgba(255, 107, 53, 0.2);
+    0 0 10px rgba(132, 204, 22, 0.6),
+    0 0 20px rgba(132, 204, 22, 0.4),
+    0 0 30px rgba(132, 204, 22, 0.2);
   transform-origin: center;
 }
 
@@ -111,8 +111,8 @@
   bottom: -4px;
   background: radial-gradient(
     circle,
-    rgba(255, 107, 53, 0.4) 0%,
-    rgba(255, 165, 0, 0.2) 40%,
+    rgba(132, 204, 22, 0.4) 0%,
+    rgba(163, 230, 53, 0.2) 40%,
     transparent 70%
   );
   border-radius: 50%;
@@ -129,8 +129,8 @@
   height: 20px;
   background: radial-gradient(
     circle,
-    rgba(255, 165, 0, 0.6) 0%,
-    rgba(255, 107, 53, 0.3) 30%,
+    rgba(163, 230, 53, 0.6) 0%,
+    rgba(132, 204, 22, 0.3) 30%,
     transparent 70%
   );
   border-radius: 50%;
@@ -216,14 +216,14 @@
 
 /* Hover effect on the entire typewriter */
 .typewriter-wrapper:hover .typewriter-char {
-  text-shadow: 0 0 8px rgba(255, 107, 53, 0.3);
+  text-shadow: 0 0 8px rgba(132, 204, 22, 0.3);
 }
 
 .typewriter-wrapper:hover .typewriter-cursor {
   box-shadow:
-    0 0 15px rgba(255, 107, 53, 0.8),
-    0 0 25px rgba(255, 107, 53, 0.5),
-    0 0 35px rgba(255, 107, 53, 0.3);
+    0 0 15px rgba(132, 204, 22, 0.8),
+    0 0 25px rgba(132, 204, 22, 0.5),
+    0 0 35px rgba(132, 204, 22, 0.3);
 }
 
 /* Mobile responsive */
