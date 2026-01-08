@@ -1,54 +1,47 @@
 import { useEffect, useState } from 'react';
+import './Typewriter.css';
 
-const Typewriter = ({ texts = [], speed = 100, delay = 1500 }) => {
+const Typewriter = ({ texts = [], speed = 80, deleteSpeed = 40, delay = 2000 }) => {
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopIndex, setLoopIndex] = useState(0);
-  const [typingSpeed, setTypingSpeed] = useState(speed);
+  const [charIndex, setCharIndex] = useState(0);
 
   useEffect(() => {
-    let typingTimeout;
+    if (texts.length === 0) return;
 
-    const fullText = texts[loopIndex % texts.length];
+    const currentText = texts[loopIndex % texts.length];
 
-    const handleTyping = () => {
-      if (!isDeleting) {
-        if (displayedText.length < fullText.length) {
-          setDisplayedText(prev => fullText.substring(0, prev.length + 1));
-          setTypingSpeed(speed);
-        } else {
-          typingTimeout = setTimeout(() => setIsDeleting(true), delay);
-          return;
-        }
-      } else {
-        if (displayedText.length > 0) {
-          setDisplayedText(prev => fullText.substring(0, prev.length - 1));
-          setTypingSpeed(speed / 1.5);
-        } else {
-          setIsDeleting(false);
-          setLoopIndex(prev => prev + 1);
-        }
-      }
-
-      typingTimeout = setTimeout(handleTyping, typingSpeed);
+    const getRandomSpeed = (baseSpeed) => {
+      return baseSpeed + Math.random() * 30;
     };
 
-    typingTimeout = setTimeout(handleTyping, typingSpeed);
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        if (charIndex < currentText.length) {
+          setDisplayedText(currentText.substring(0, charIndex + 1));
+          setCharIndex(charIndex + 1);
+        } else {
+          setTimeout(() => setIsDeleting(true), delay);
+        }
+      } else {
+        if (charIndex > 0) {
+          setDisplayedText(currentText.substring(0, charIndex - 1));
+          setCharIndex(charIndex - 1);
+        } else {
+          setIsDeleting(false);
+          setLoopIndex((prev) => (prev + 1) % texts.length);
+        }
+      }
+    }, isDeleting ? deleteSpeed : getRandomSpeed(speed));
 
-    return () => clearTimeout(typingTimeout);
-  }, [displayedText, isDeleting, loopIndex, texts, speed, delay, typingSpeed]);
+    return () => clearTimeout(timeout);
+  }, [charIndex, isDeleting, loopIndex, texts, speed, deleteSpeed, delay]);
 
   return (
-    <span
-      style={{
-        borderRight: '2px solid orange',
-        whiteSpace: 'nowrap',
-        fontFamily: 'monospace',
-        paddingRight: '5px',
-        transition: 'all 0.1s ease-in-out',
-      }}
-    >
-      {displayedText}
+    <span className="typewriter-container">
+      <span className="typewriter-text">{displayedText}</span>
+      <span className="typewriter-cursor"></span>
     </span>
   );
 };

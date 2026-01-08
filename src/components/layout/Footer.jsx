@@ -1,8 +1,10 @@
+import OptimizedImage from "../common/OptimizedImage";
+
 const Footer = () => {
   return (
     <footer>
       <div className="footer-content">
-        <img src="./images/logo.png" alt="Footer Logo" />
+        <OptimizedImage src="./images/logo.png" alt="Footer Logo" />
         <p>
           Designed loosely in <span className="footer-highlight">Figma</span>{" "}
           and coded in <span className="footer-highlight">VS Code</span> by

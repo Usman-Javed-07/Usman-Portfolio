@@ -1,3 +1,6 @@
+import OptimizedImage from "../common/OptimizedImage";
+import AnimatedSection from "../common/AnimatedSection";
+
 const Skills = () => {
   const skillImages = [
     { src: "./images/htmllogo.png", alt: "html logo" },
@@ -17,17 +20,19 @@ const Skills = () => {
 
   return (
     <section className="my-skills-section">
-      <div className="work-companies">
-        <p>Technologies I have used</p>
-      </div>
+      <AnimatedSection animation="fade-up" delay={0.1}>
+        <div className="work-companies">
+          <p>Technologies I have used</p>
+        </div>
+      </AnimatedSection>
       <div className="skills-container">
         <div className="skills-slider">
           <div className="my-skills">
             {skillImages.map((skill, index) => (
-              <img key={index} src={skill.src} alt={skill.alt} />
+              <OptimizedImage key={index} src={skill.src} alt={skill.alt} />
             ))}
             {skillImages.map((skill, index) => (
-              <img key={`duplicate-${index}`} src={skill.src} alt={skill.alt} />
+              <OptimizedImage key={`duplicate-${index}`} src={skill.src} alt={skill.alt} />
             ))}
           </div>
         </div>

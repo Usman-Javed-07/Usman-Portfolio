@@ -1,4 +1,5 @@
 import "./App.css";
+import "./styles/animations.css";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import About from "./components/sections/About";
@@ -7,10 +8,12 @@ import Skills from "./components/sections/Skills";
 import Experience from "./components/sections/Experience";
 import Companies from "./components/sections/Companies";
 import ScrollToTop from "./components/common/ScrollToTop";
+import PageLoader from "./components/common/PageLoader";
 
 function App() {
   return (
     <>
+      <PageLoader />
       <Header />
 
       <main className="main-content">

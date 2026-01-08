@@ -1,0 +1,57 @@
+.animated-section {
+  opacity: 0;
+  transition: all var(--animation-duration) cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: var(--animation-delay);
+}
+
+.animated-section.visible {
+  opacity: 1;
+}
+
+.fade-up {
+  transform: translateY(50px);
+}
+
+.fade-up.visible {
+  transform: translateY(0);
+}
+
+.fade-down {
+  transform: translateY(-50px);
+}
+
+.fade-down.visible {
+  transform: translateY(0);
+}
+
+.fade-left {
+  transform: translateX(50px);
+}
+
+.fade-left.visible {
+  transform: translateX(0);
+}
+
+.fade-right {
+  transform: translateX(-50px);
+}
+
+.fade-right.visible {
+  transform: translateX(0);
+}
+
+.scale-up {
+  transform: scale(0.8);
+}
+
+.scale-up.visible {
+  transform: scale(1);
+}
+
+.fade-in {
+  transform: none;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}

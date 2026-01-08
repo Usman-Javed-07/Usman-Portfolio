@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { RiChatPrivateFill } from "react-icons/ri";
 import { IoIosCloseCircle } from "react-icons/io";
+import OptimizedImage from "../common/OptimizedImage";
 
 const ProjectCard = ({ project }) => {
   const [showModal, setShowModal] = useState(false);
@@ -18,8 +19,8 @@ const ProjectCard = ({ project }) => {
   };
 
   return (
-    <div className="project-card">
-      <img src={project.image} alt={project.title} />
+    <div className="project-card hover-lift">
+      <OptimizedImage src={project.image} alt={project.title} />
       <h4>{project.title}</h4>
 
       <div className="Private-repo">

@@ -1,3 +1,6 @@
+import OptimizedImage from "../common/OptimizedImage";
+import AnimatedSection from "../common/AnimatedSection";
+
 const Companies = () => {
   const companyLogos = [
     { src: "./images/solslogo.png", alt: "sols" },
@@ -6,16 +9,18 @@ const Companies = () => {
 
   return (
     <section className="work-section">
-      <div className="work-companies">
-        <p>Companies I'm proud to have collaborated with</p>
-      </div>
+      <AnimatedSection animation="fade-up" delay={0.1}>
+        <div className="work-companies">
+          <p>Companies I'm proud to have collaborated with</p>
+        </div>
+      </AnimatedSection>
       <div style={{ overflow: "hidden", width: "100%" }}>
         <div className="company-logo">
-          {Array(7)
+          {Array(10)
             .fill(companyLogos)
             .flat()
             .map((logo, index) => (
-              <img key={index} src={logo.src} alt={logo.alt} />
+              <OptimizedImage key={index} src={logo.src} alt={logo.alt} />
             ))}
         </div>
       </div>

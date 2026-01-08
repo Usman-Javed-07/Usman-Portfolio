@@ -271,6 +271,13 @@ body {
   height: auto;
   top: -350px;
   left: 500px;
+  animation: floatNode 4s ease-in-out infinite, iconGlow 3s ease-in-out infinite;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  filter: drop-shadow(0 0 10px rgba(132, 204, 22, 0.3));
+}
+.node-icon img:hover {
+  transform: scale(1.2) translateY(-15px) rotate(15deg);
+  filter: drop-shadow(0 0 25px rgba(132, 204, 22, 0.8));
 }
 @media screen and (max-width: 1440px) {
   .node-icon img {
@@ -324,6 +331,14 @@ body {
   height: auto;
   top: -14rem;
   left: 33%;
+  animation: floatJS 3.5s ease-in-out infinite, iconGlow 3.2s ease-in-out infinite;
+  animation-delay: 0.5s;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  filter: drop-shadow(0 0 10px rgba(247, 223, 30, 0.4));
+}
+.js-icon img:hover {
+  transform: scale(1.25) translateY(-15px) rotate(-15deg);
+  filter: drop-shadow(0 0 25px rgba(247, 223, 30, 0.9));
 }
 @media screen and (max-width: 1024px) {
   .js-icon img {
@@ -377,6 +392,14 @@ body {
   height: auto;
   top: -34rem;
   left: 55%;
+  animation: floatReact 5s ease-in-out infinite, iconGlow 3.5s ease-in-out infinite;
+  animation-delay: 1s;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  filter: drop-shadow(0 0 10px rgba(97, 218, 251, 0.4));
+}
+.react-icon img:hover {
+  transform: scale(1.25) rotate(360deg);
+  filter: drop-shadow(0 0 30px rgba(97, 218, 251, 1));
 }
 @media screen and (max-width: 1024px) {
   .react-icon img {
@@ -428,6 +451,14 @@ body {
   height: auto;
   top: -20rem;
   left: 62%;
+  animation: floatHTML 4.2s ease-in-out infinite, iconGlow 3.8s ease-in-out infinite;
+  animation-delay: 1.5s;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  filter: drop-shadow(0 0 10px rgba(227, 79, 38, 0.4));
+}
+.html-icon img:hover {
+  transform: scale(1.25) translateY(-20px);
+  filter: drop-shadow(0 0 25px rgba(227, 79, 38, 0.9));
 }
 @media screen and (max-width: 1024px) {
   .html-icon img {
@@ -598,19 +629,52 @@ body {
 
 .work-companies {
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
+  margin-bottom: 30px;
+}
+
+.work-companies p {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.work-section {
+  position: relative;
+  padding: 60px 0;
+}
+
+.work-section > div[style*="overflow"] {
+  position: relative;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
 }
 
 .company-logo {
   display: flex;
-  gap: 20px;
-  animation: slideX 10s infinite alternate ease-in-out;
+  gap: 60px;
+  animation: scroll-left 30s linear infinite;
   width: max-content;
-  padding: 50px;
+  padding: 50px 0;
 }
 
-@keyframes slideX {
+.company-logo:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
   0% {
     transform: translateX(0);
   }
@@ -620,8 +684,44 @@ body {
 }
 
 .company-logo img {
-  width: 110px;
+  width: 140px;
   height: auto;
+  transition: all 0.4s ease;
+  opacity: 0.9;
+}
+
+.company-logo img:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .company-logo {
+    gap: 40px;
+    animation: scroll-left 20s linear infinite;
+  }
+
+  .company-logo img {
+    width: 100px;
+  }
+
+  .work-companies {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 476px) {
+  .company-logo {
+    gap: 30px;
+  }
+
+  .company-logo img {
+    width: 80px;
+  }
+
+  .work-section {
+    padding: 40px 0;
+  }
 }
 
 .text-about {

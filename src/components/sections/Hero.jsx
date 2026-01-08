@@ -2,6 +2,7 @@ import { FaLessThan, FaGreaterThan } from "react-icons/fa";
 import { PiLineVerticalThin } from "react-icons/pi";
 import Typewriter from "../common/Typewriter";
 import SocialLinks from "../ui/SocialLinks";
+import OptimizedImage from "../common/OptimizedImage";
 
 const Hero = () => {
   return (
@@ -38,19 +39,19 @@ const Hero = () => {
       </div>
 
       <div className="my-image">
-        <img src="./images/usman.png" alt="my image" />
+        <OptimizedImage src="./images/usman.png" alt="my image" priority={true} loading="eager" />
       </div>
       <div className="node-icon">
-        <img src="./images/nod.png" alt="node js" />
+        <OptimizedImage src="./images/nod.png" alt="node js" />
       </div>
       <div className="js-icon">
-        <img src="./images/js.png" alt="js" />
+        <OptimizedImage src="./images/js.png" alt="js" />
       </div>
       <div className="react-icon">
-        <img src="./images/react.png" alt="react" />
+        <OptimizedImage src="./images/react.png" alt="react" />
       </div>
       <div className="html-icon">
-        <img src="./images/html.png" alt="html" />
+        <OptimizedImage src="./images/html.png" alt="html" />
       </div>
     </section>
   );

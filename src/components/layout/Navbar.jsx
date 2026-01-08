@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaBars, FaTimes, FaLongArrowAltRight } from "react-icons/fa";
 import SocialLinks from "../ui/SocialLinks";
+import OptimizedImage from "../common/OptimizedImage";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,7 +10,7 @@ const Navbar = () => {
     <nav className="navbar-container">
       <div className="navbar-logo">
         <a href="#">
-          <img className="logo-image" src="./images/logo.png" alt="logo image" />
+          <OptimizedImage className="logo-image" src="./images/logo.png" alt="logo image" priority={true} loading="eager" />
         </a>
       </div>
 

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { projectsData } from "../../data/projects";
 import ProjectCard from "../cards/ProjectCard";
+import AnimatedSection from "../common/AnimatedSection";
 
 const Projects = () => {
   const [showAll, setShowAll] = useState(false);
@@ -10,16 +11,20 @@ const Projects = () => {
   return (
     <section className="projects-section">
       <div className="projects">
-        <h1 className="about-heading">
-          <span className="text-about">Projects</span> ( ) {"{"}
-        </h1>
+        <AnimatedSection animation="fade-up" delay={0.1}>
+          <h1 className="about-heading">
+            <span className="text-about">Projects</span> ( ) {"{"}
+          </h1>
+        </AnimatedSection>
 
-        <div className="work-companies">
-          <p>Some of my notable work</p>
-        </div>
+        <AnimatedSection animation="fade-up" delay={0.2}>
+          <div className="work-companies">
+            <p>Some of my notable work</p>
+          </div>
+        </AnimatedSection>
 
         <section className="projects-container">
-          <div className="project-grid">
+          <div className="project-grid stagger-animation">
             {visibleProjects.map((project, index) => (
               <ProjectCard key={index} project={project} />
             ))}
