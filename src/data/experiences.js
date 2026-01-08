@@ -1,0 +1,36 @@
+export const experiencesData = [
+  {
+    logo: "./images/zbeelogo.png",
+    alt: "zbee tech",
+    dateRange: "Dec 2024 - present",
+    title: "Full stack Developer ( MERN stack Developer )",
+    points: [
+      "Worked as a Full Stack Developer on high-impact projects for enterprise clients using React, Angular, Node.js, and React Native.",
+      "Developed frontend user interfaces with HTML, CSS, Tailwind, and vanilla JavaScript, ensuring responsive design and accessibility.",
+      "Integrated Stripe payment gateway into web applications to enable secure online transactions.",
+      "Built scalable backend services using Node.js and Express, with RESTful APIs for seamless frontend-backend communication.",
+      "Collaborated in cross-functional teams to deliver full lifecycle software solutions, from architecture to deployment.",
+      "Handled both client-facing UI components and backend logic, contributing to complete end-to-end development pipelines.",
+      "Debugged, tested, and optimized applications for performance, responsiveness, and usability across multiple platforms.",
+      "Maintained clean, reusable codebases with Git version control and agile collaboration methods.",
+    ],
+  },
+  {
+    logo: "./images/solslogo.png",
+    alt: "Sols",
+    dateRange: "Aug 2024 - Nov 2024",
+    title: "Full Stack Developer",
+    points: [
+      "Led end-to-end development of full stack web applications using React, Node.js, Express.js, and MongoDB/MySQL for real-world projects and practice-based learning.",
+      "Built and deployed multiple frontend interfaces focusing on responsive design, user experience, and component reusability with modern JavaScript and CSS frameworks.",
+      "Designed and implemented RESTful APIs and handled backend logic including authentication, CRUD operations, and database integration.",
+      "Developed and maintained full stack projects, connecting frontend and backend seamlessly to demonstrate dynamic data flow and user interaction.",
+      "Collaborated in Git-based workflows, managing branches, pull requests, and version control across projects for better team coordination and deployment readiness.",
+      "Participated in code reviews, debugging, and optimization, improving performance and code quality across all developed modules.",
+      "Worked closely with mentors and peers in Agile-style development cycles, consistently meeting feature delivery targets and deadlines.",
+      "Gained hands-on experience in API integration, secure login (JWT), data validation, and deployment processes on platforms like Render and Vercel.",
+      "Practiced translating UI/UX designs from tools like Figma into live interactive components, adhering to accessibility and usability best practices.",
+      "Explored and applied modern development practices including state management, form handling, and responsive grid systems to enhance user interaction.",
+    ],
+  },
+];

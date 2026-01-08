@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 const ExperienceCard = ({ logo, alt, dateRange, title, points }) => {

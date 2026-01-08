@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Typewriter = ({ texts = [], speed = 100, delay = 1500 }) => {
   const [displayedText, setDisplayedText] = useState('');
@@ -26,7 +26,7 @@ const Typewriter = ({ texts = [], speed = 100, delay = 1500 }) => {
           setTypingSpeed(speed / 1.5);
         } else {
           setIsDeleting(false);
-          setLoopIndex(prev => prev + 1); // move to next text
+          setLoopIndex(prev => prev + 1);
         }
       }
 
