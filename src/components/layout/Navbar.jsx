@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaBars, FaTimes, FaLongArrowAltRight } from "react-icons/fa";
 import SocialLinks from "../ui/SocialLinks";
 import OptimizedImage from "../common/OptimizedImage";
+import ThemeToggle from "../common/ThemeToggle";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,8 +15,11 @@ const Navbar = () => {
         </a>
       </div>
 
-      <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? <FaTimes /> : <FaBars />}
+      <div className="navbar-actions">
+        <ThemeToggle />
+        <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </div>
       </div>
 
       <ul className={`navbar-links ${menuOpen ? "active" : ""}`}>

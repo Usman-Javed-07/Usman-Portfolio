@@ -43,7 +43,7 @@ const Projects = () => {
               </a>
             </div>
           )}
-          <p style={{ fontSize: "24px", fontWeight: 500, marginLeft: "50px" }}>
+          <p className="closing-bracket" style={{ marginLeft: "50px" }}>
             {"}"}
           </p>
         </section>

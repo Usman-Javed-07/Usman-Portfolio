@@ -17,14 +17,7 @@ const Experience = () => {
         {experiencesData.map((exp, idx) => (
           <ExperienceCard key={idx} {...exp} />
         ))}
-        <p
-          style={{
-            fontSize: "24px",
-            fontWeight: 500,
-            marginLeft: "5px",
-            color: "#fff",
-          }}
-        >
+        <p className="closing-bracket">
           {"}"}
         </p>
       </div>

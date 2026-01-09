@@ -1,0 +1,39 @@
+.theme-toggle {
+  background: transparent;
+  border: 2px solid var(--accent-primary);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--accent-primary);
+  padding: 0;
+  position: relative;
+}
+
+.theme-toggle:hover {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+  transform: rotate(180deg);
+}
+
+.theme-icon {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+  .theme-toggle {
+    width: 35px;
+    height: 35px;
+  }
+
+  .theme-icon {
+    font-size: 16px;
+  }
+}

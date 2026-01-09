@@ -9,10 +9,11 @@ import Experience from "./components/sections/Experience";
 import Companies from "./components/sections/Companies";
 import ScrollToTop from "./components/common/ScrollToTop";
 import PageLoader from "./components/common/PageLoader";
+import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
   return (
-    <>
+    <ThemeProvider>
       <PageLoader />
       <Header />
 
@@ -26,7 +27,7 @@ function App() {
       <Skills />
       <Experience />
       <Footer />
-    </>
+    </ThemeProvider>
   );
 }
 

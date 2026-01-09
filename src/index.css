@@ -1,6 +1,40 @@
 :root {
   font-family: 'Fira Code', monospace;
-  background-color: #161916;
+}
+
+/* Dark theme (default) */
+[data-theme="dark"] {
+  --bg-primary: #161916;
+  --bg-secondary: #101410;
+  --text-primary: #fff;
+  --text-secondary: #d1d5db;
+  --accent-primary: #84cc16;
+  --accent-secondary: #a3e635;
+  --shadow-color: rgba(131, 204, 22, 0.081);
+  --navbar-mobile-bg: #2227224e;
+  --scroll-btn-bg: #fff;
+  --scroll-btn-color: #222;
+  --link-color: #3b82f6;
+}
+
+/* Light theme */
+[data-theme="light"] {
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4b5563;
+  --accent-primary: #65a30d;
+  --accent-secondary: #7cb518;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --navbar-mobile-bg: rgba(255, 255, 255, 0.95);
+  --scroll-btn-bg: #1a1a1a;
+  --scroll-btn-color: #fff;
+  --link-color: #2563eb;
+}
+
+body {
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 
